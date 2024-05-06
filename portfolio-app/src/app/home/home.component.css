@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+    }
+
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+    background-color: #FFC470;
+    
+    font-family: "Montserrat";
+    font-size: small;
+}
+
+.left-container {
+    box-sizing: border-box;
+    padding: 2%;
+
+
+    @media (orientation: landscape) {
+        position: sticky;
+        top: 0;
+    }
+    /* position: sticky;
+    top: 0; */
+    flex: 1 0 40%;
+
+    background-color: #4793AF;
+}
+
+.right-container {
+    box-sizing: border-box;
+    padding: 2%;
+
+    flex: 1 1 auto;
+    background-color: #DD5746;
+}
+
+.left-content {
+
+}
+
+.right-content {
+
+}

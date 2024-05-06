@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="left-container">
+        <div class="left-content">
+            <p>
+                <a routerLink="/" routerLinkActive="active"> Return Home </a>
+            </p>
+
+            <h1>Filters</h1>
+
+            <h2>Enter any Tags, Names</h2>
+            <input type="text" class="tag-input" (keydown)="onKeyDownTagInput($event)"/><br>
+
+            <h2>Period</h2>
+            <p> From <input type="range" min="{{minYear}}" max="{{maxYear}}" (change)="onMinRangeInputChange($event)"/> <span> {{minYearSearch}} </span> </p>
+            <p> To<input type="range" min="{{minYear}}" max="{{maxYear}}" (change)="onMaxRangeInputChange($event)"/> <span> {{maxYearSearch}} </span> </p>
+
+            <input type="button" value="Search"/>
+            
+        </div>
+    </div>
+
+    <div class="right-container">
+        <div class="right-content">
+
+            <table class="table">
+                <tr class="table-header-container">
+                    <th class="table-header-item">Project name</th>
+                    <th class="table-header-item">Year</th>
+                    <th class="table-header-item">Tags</th>
+                    <th class="table-header-item">Project link</th>
+                    <th class="table-header-item">Github link</th>
+                  </tr>
+
+                <tr *ngFor="let p of projects" class="table-content-container">
+                    <td class="table-content-item" (click)="showDetails(p)"> {{p.name}} </td>
+                    <td class="table-content-item"> {{p.year}} </td>
+                    <td class="table-content-item" > <span class="tag" *ngFor="let t of p.tags"> {{t}} </span></td>
+                    <td class="table-content-item"> <a href="{{p.link}}">Link</a> </td>
+                    <td class="table-content-item"> <a href="{{p.githubLink}}">Github Link</a> </td>
+                </tr>
+            </table>
+        
+        </div>
+    </div>
+</div>
