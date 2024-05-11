@@ -8,14 +8,20 @@
             <h1>Filters</h1>
 
             <h2>Enter any Tags, Names</h2>
-            <input type="text" class="tag-input" (keydown)="onKeyDownTagInput($event)"/><br>
+            <input type="text" class="tag-input" (keydown)="onKeyDownTagInput($event)" value="{{search}}" /> <br>
+            <div class="search-tag-container">
+                <span class="search-tag" *ngFor="let t of searchTags" (click)="onSearchTagClick($event)"> {{t}} </span>
+            </div>
 
             <h2>Period</h2>
-            <p> From <input type="range" min="{{minYear}}" max="{{maxYear}}" (change)="onMinRangeInputChange($event)"/> <span> {{minYearSearch}} </span> </p>
-            <p> To<input type="range" min="{{minYear}}" max="{{maxYear}}" (change)="onMaxRangeInputChange($event)"/> <span> {{maxYearSearch}} </span> </p>
+            <input type="range" min="{{minYear}}" max="{{maxYear}}" value="{{minYearSearch}}"
+                (change)="onMinRangeInputChange($event)" />
+            <label class="date-selection-label"> From {{minYearSearch}} </label>
 
-            <input type="button" value="Search"/>
-            
+            <input type="range" min="{{minYear}}" max="{{maxYear}}" value="{{maxYearSearch}}"
+                (change)="onMaxRangeInputChange($event)" />
+            <label class="date-selection-label"> To {{maxYearSearch}} </label>
+
         </div>
     </div>
 
@@ -24,22 +30,22 @@
 
             <table class="table">
                 <tr class="table-header-container">
-                    <th class="table-header-item">Project name</th>
-                    <th class="table-header-item">Year</th>
+                    <th class="table-header-item" (click)="onNameClick($event)">Project name</th>
+                    <th class="table-header-item" (click)="onYearClick($event)">Year</th>
                     <th class="table-header-item">Tags</th>
                     <th class="table-header-item">Project link</th>
                     <th class="table-header-item">Github link</th>
-                  </tr>
+                </tr>
 
-                <tr *ngFor="let p of projects" class="table-content-container">
+                <tr *ngFor="let p of displayedProjects" class="table-content-container">
                     <td class="table-content-item" (click)="showDetails(p)"> {{p.name}} </td>
                     <td class="table-content-item"> {{p.year}} </td>
-                    <td class="table-content-item" > <span class="tag" *ngFor="let t of p.tags"> {{t}} </span></td>
+                    <td class="table-content-item"> <span class="array-tag" *ngFor="let t of p.tags"> {{t}} </span></td>
                     <td class="table-content-item"> <a href="{{p.link}}">Link</a> </td>
                     <td class="table-content-item"> <a href="{{p.githubLink}}">Github Link</a> </td>
                 </tr>
             </table>
-        
+
         </div>
     </div>
 </div>
