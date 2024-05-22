@@ -3,7 +3,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortHeader } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
-import { filter } from 'rxjs';
 
 
 
@@ -18,7 +17,7 @@ import { filter } from 'rxjs';
   styleUrl: './projects-list.component.css'
 })
 
-export class ProjectsListComponent implements OnChanges{
+export class ProjectsListComponent implements OnChanges {
 
   @Input() search: string = "eeeee";
 
@@ -40,39 +39,45 @@ export class ProjectsListComponent implements OnChanges{
     this.displayedProjects = this.allProjectsData
   }
 
-  getProjectsData(): any[] {
-    let projects: any[] = [
-      {name: 'Infomatics', year: "2015", tags: ["Angular", "Spring", "C++"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'VortexForge', year: "2016", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'AquaPulse', year: "2017", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'PLuminaSphere', year: "2021", tags: ["Angular", "Spring", "C++", "C"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'EchoShift', year: "2018", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'SolarSpectra', year: "2019", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'NovaQuasar', year: "2020", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'HorizonHive', year: "2022", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'PixelPulse', year: "2023", tags: ["Angular", "Spring", "C++"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'DreamForge', year: "2024", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'ZenithZone', year: "2018", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'AlphaWave', year: "2019", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'CrystalCove', year: "2020", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'BlissBlaze', year: "2022", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'MysticMingle', year: "2023", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-      {name: 'TitaniumTrek', year: "2024", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub",  details: "Bla bla bla bla bla bla bla"},
-    ]
-    projects.sort(this.sortByYearDescending)
-    return projects
+  getProjectsData(): any {
+    let projects: any[] = []
+
+    fetch("../assets/data.json")
+      .then((response) => response.json())
+      .then((json) => {projects = json.projects}).then(() => {return projects})
+  
+    // projects: any[] = [
+    //   { name: 'Infomatics', year: "2015", tags: ["Angular", "Spring", "C++"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'VortexForge', year: "2016", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'AquaPulse', year: "2017", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'PLuminaSphere', year: "2021", tags: ["Angular", "Spring", "C++", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'EchoShift', year: "2018", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'SolarSpectra', year: "2019", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'NovaQuasar', year: "2020", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'HorizonHive', year: "2022", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'PixelPulse', year: "2023", tags: ["Angular", "Spring", "C++"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'DreamForge', year: "2024", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'ZenithZone', year: "2018", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'AlphaWave', year: "2019", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'CrystalCove', year: "2020", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'BlissBlaze', year: "2022", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'MysticMingle', year: "2023", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    //   { name: 'TitaniumTrek', year: "2024", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
+    // ]
+    // projects.sort(this.sortByYearDescending)
+    // return projects
   }
 
   sortByYearAscending(a: any, b: any): number {
     const dateA: Number = a.year
     const dateB: Number = b.year
-    return (dateA < dateB) ? -1 : 1 
+    return (dateA < dateB) ? -1 : 1
   }
 
   sortByYearDescending(a: any, b: any): number {
     const dateA: Number = a.year
     const dateB: Number = b.year
-    return (dateA < dateB) ? 1 : -1 
+    return (dateA < dateB) ? 1 : -1
   }
 
   sortByNameAscending(a: any, b: any): number {
@@ -88,7 +93,7 @@ export class ProjectsListComponent implements OnChanges{
   }
 
   showDetails(project: any) {
-    alert(project.details) 
+    alert(project.details)
   }
 
 
@@ -97,13 +102,13 @@ export class ProjectsListComponent implements OnChanges{
     let finalData: any[] = []
 
     // Filter by name & tags
-    if(this.searchTags.length > 0) {
+    if (this.searchTags.length > 0) {
       this.allProjectsData.forEach(element => {
         let searchedTags: string[] = Array.from(element.tags)
         searchedTags.push(element.name)
         this.searchTags.forEach(searchTag => {
           searchedTags.forEach(tag => {
-            if(tag.toUpperCase() == searchTag.toUpperCase()) {
+            if (tag.toUpperCase() == searchTag.toUpperCase()) {
               tagFilteredData.push(element)
             }
           });
@@ -116,8 +121,8 @@ export class ProjectsListComponent implements OnChanges{
 
     // Filter by dates
     tagFilteredData.forEach(element => {
-      if(element.year >= this.minYearSearch)
-        if(element.year <= this.maxYearSearch)
+      if (element.year >= this.minYearSearch)
+        if (element.year <= this.maxYearSearch)
           finalData.push(element);
     });
 
@@ -133,7 +138,7 @@ export class ProjectsListComponent implements OnChanges{
   }
 
   onMinRangeInputChange(event: any): void {
-    if(event.target.value > this.maxYearSearch) {
+    if (event.target.value > this.maxYearSearch) {
       event.target.value = this.maxYearSearch
     }
     this.minYearSearch = event.target.value
@@ -141,7 +146,7 @@ export class ProjectsListComponent implements OnChanges{
   }
 
   onMaxRangeInputChange(event: any): void {
-    if(event.target.value < this.minYearSearch) {
+    if (event.target.value < this.minYearSearch) {
       event.target.value = this.minYearSearch
     }
     this.maxYearSearch = event.target.value
@@ -149,8 +154,8 @@ export class ProjectsListComponent implements OnChanges{
   }
 
   onKeyDownTagInput(event: any): void {
-    if(event.key == "Enter") {
-      if(event.target.value != "") {
+    if (event.key == "Enter") {
+      if (event.target.value != "") {
         this.searchTags.push(event.target.value)
       }
       event.target.value = ""
@@ -159,8 +164,8 @@ export class ProjectsListComponent implements OnChanges{
   }
 
   onSearchTagClick(event: any): void {
-    this.searchTags = this.searchTags.filter((value) => { return value != event.target.innerText} )
+    this.searchTags = this.searchTags.filter((value) => { return value != event.target.innerText })
     this.filter()
   }
-  
+
 }

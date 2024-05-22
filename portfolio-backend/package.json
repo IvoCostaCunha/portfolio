@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-backend",
+  "version": "0.0.1",
+  "description": "Backend for portfolio-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon server.js"
+  },
+  "author": "Ivo Costa Cunha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "serve-favicon": "^2.5.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
