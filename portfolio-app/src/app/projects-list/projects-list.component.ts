@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
 
 export class ProjectsListComponent implements OnChanges {
 
-  @Input() search: string = "eeeee";
+  @Input() search: string = "";
 
   ngOnChanges() {
     console.log("changes")
@@ -34,38 +34,26 @@ export class ProjectsListComponent implements OnChanges {
   displayedProjects: any[] = []
   searchTags: string[] = []
 
-  ngOnInit() {
-    this.allProjectsData = this.getProjectsData()
+  async ngOnInit() {
+    try {
+      this.allProjectsData = await this.getProjectsData()
+    } catch(error) {
+      console.error(error)
+    }
+
     this.displayedProjects = this.allProjectsData
   }
 
-  getProjectsData(): any {
+  async getProjectsData(): Promise<any> {
     let projects: any[] = []
 
-    fetch("../assets/data.json")
-      .then((response) => response.json())
-      .then((json) => {projects = json.projects}).then(() => {return projects})
-  
-    // projects: any[] = [
-    //   { name: 'Infomatics', year: "2015", tags: ["Angular", "Spring", "C++"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'VortexForge', year: "2016", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'AquaPulse', year: "2017", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'PLuminaSphere', year: "2021", tags: ["Angular", "Spring", "C++", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'EchoShift', year: "2018", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'SolarSpectra', year: "2019", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'NovaQuasar', year: "2020", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'HorizonHive', year: "2022", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'PixelPulse', year: "2023", tags: ["Angular", "Spring", "C++"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'DreamForge', year: "2024", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'ZenithZone', year: "2018", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'AlphaWave', year: "2019", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'CrystalCove', year: "2020", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'BlissBlaze', year: "2022", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'MysticMingle', year: "2023", tags: ["Angular", "Spring"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    //   { name: 'TitaniumTrek', year: "2024", tags: ["Angular", "Spring", "C"], link: "test.com", githubLink: "testGithub", details: "Bla bla bla bla bla bla bla" },
-    // ]
-    // projects.sort(this.sortByYearDescending)
-    // return projects
+    try {
+      let response = await (await fetch("http://localhost:8080/projects")).json()
+      projects = response.data
+      return projects
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   sortByYearAscending(a: any, b: any): number {

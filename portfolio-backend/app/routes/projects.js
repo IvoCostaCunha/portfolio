@@ -107,6 +107,7 @@ module.exports = (app) => {
     logs.reqLog(req)
     const data = await getProjectsData()
     if (data != 500) {
+      res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
       res.status(200).send({ "data": data })
     }
     else {

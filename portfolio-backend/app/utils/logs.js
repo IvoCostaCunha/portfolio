@@ -8,7 +8,7 @@ reqLog = async (req) => {
     const url = req.url
     const ip = req.ip
 
-    console.log("%s %s", method, url)
+    console.log("%s %s (%s)", method, url, Date.now())
     console.log("By IP: %s", ip)
 
     try {
