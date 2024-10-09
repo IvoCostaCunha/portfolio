@@ -1,5 +1,5 @@
 .left-container {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 2%;
     flex: 0 0 35%;
 
@@ -7,7 +7,7 @@
 
     @media (orientation: landscape) {
         position: sticky;
-        top: 9%;
+        top: 8%;
     }
 
     @media (orientation: portrait) {
@@ -36,7 +36,7 @@
 
 .social {
     margin-top: 2%;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     text-align: center;
 }
 
@@ -120,5 +120,11 @@
 .project-bottom {
     display: flex;
     flex-direction: row;
+}
+
+.project-links {
+    margin-top: 2%;
+    flex: 1 1 auto;
+    text-align: center;
 }
 

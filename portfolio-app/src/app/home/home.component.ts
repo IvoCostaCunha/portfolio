@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
         tags: ["angular", "css", "nodejs", "frontend", "backend", "web", "typescript"],
         link: "https://ivocostacunha-portfolio.com",
         githubLink: "https://github.com/IvoCostaCunha/portfolio-angular",
-        description: "My personnal portfolio to present myself and list my projects."
+        description: "My personnal portfolio to present myself and list my projects. This website in fact."
       },
       {
         title: "audio-player",
