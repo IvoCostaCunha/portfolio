@@ -4,6 +4,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortHeader } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 
+import { env } from '../environment/env'
+
 
 
 @Component({
@@ -48,9 +50,8 @@ export class ProjectsListComponent implements OnChanges {
     let projects: any[] = []
 
     try {
-      let response = await (await fetch("http://localhost:8080/projects")).json()
-      projects = response.data
-      return projects
+      let res = await (await fetch(env.apiFullAdress + "/projects")).json()
+      return res
     } catch (error) {
       console.error(error)
     }

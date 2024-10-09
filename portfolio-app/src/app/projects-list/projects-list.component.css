@@ -1,22 +1,3 @@
-.container {
-    display: flex;
-    align-items: flex-start;
-
-    @media (orientation: portrait) {
-        flex-direction: column;
-    }
-
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    box-sizing: border-box;
-    background-color: #FFC470;
-
-    font-family: "Montserrat";
-    font-size: small;
-}
-
 .left-container {
     box-sizing: border-box;
     padding: 2%;

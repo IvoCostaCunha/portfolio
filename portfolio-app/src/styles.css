@@ -7,3 +7,39 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-family: Montserrat;
     src: url("assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+span {
+    white-space: pre-line;
+    line-height: 1.2em;
+    text-align: justify;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+    }
+
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* box-sizing: border-box; */
+
+    height: fit-content;
+
+    background-color: #FFC470;
+
+    font-family: "Montserrat";
+    font-size: small;
+}

@@ -1,6 +1,8 @@
 [
     {
-        "login": "user",
-        "password": "password"
+        "id": "0",
+        "email": "user@domain.com",
+        "hashedPassword": "<password>",
+        "hash": "<hash>"
     }
 ]

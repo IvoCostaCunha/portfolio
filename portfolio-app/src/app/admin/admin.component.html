@@ -1,1 +1,17 @@
-<p>admin works!</p>
+<div class="container">
+  <div class="top-container">
+    <div class="content">
+      <p> <a href="#about-me"> About me</a> |
+        <a href="#projects"> Projects</a> <a routerLink="/projects-list" routerLinkActive="active"> (list) </a>
+      </p>
+      <h1> Administration </h1>
+    </div>
+  </div>
+
+  <div class="bottom-container">
+
+    <app-login *ngIf="showLogin" (isLoggedIn)="loggedIn($event)"/>
+    <app-data-modification *ngIf="showModification"/>
+
+  </div>
+</div>
