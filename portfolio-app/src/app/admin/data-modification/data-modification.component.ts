@@ -23,7 +23,11 @@ export class DataModificationComponent implements OnInit{
   @Output() isValidated = new EventEmitter<string>()
   websiteData: WebsiteData = {
     aboutMe:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.", 
-    educationResume: `I did all may studies in Nice, a city in the south of France. After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time. Since I liked it I followed with a MIAGE Licence that mixed software development with company management, and after that I got a Master in MIAGE option INTENSE.`,
+    educationResume: `I did all may studies in Nice, a city in the south of France.
+
+    After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time.
+
+    Since I liked it I followed with a MIAGE Licence that mixed software development with company management, and after that I got a Master in MIAGE option INTENSE. It's mostly the continuation of the previous licence.`,
     diplomas: [
       {
         title: "BTS SIO",
@@ -40,13 +44,17 @@ export class DataModificationComponent implements OnInit{
 
       },
       {
-        title: "Master MIAGE INTENSE",
+        title: "Master MIAGE",
         year: "2023",
-        description: "Master MIAGE INTENSE from the Université Côte d'Azur (Nice, France).",
+        description: "Master MIAGE option INTENSE from the Université Côte d'Azur (Nice, France).",
         filePath: "assets/imgs/synthia.jpg"
 
       }
-    ],  
+
+    ],
+    projectsResume: `These are the projects I'd like to highlight.
+
+    If you wantt a more exhaustive list you  can check the project list on the top left of this site.`,
     projects: [
       {
         title: "portfolio-angular",
@@ -69,7 +77,7 @@ export class DataModificationComponent implements OnInit{
       tel: "+351 962 998 386",
       email: "ivo.costacunha@icloud.com",
       github: "https://github.com/IvoCostaCunha",
-      linkedIn: "https://github.com/IvoCostaCunha"
+      linkedIn: "https://www.linkedin.com/in/ivo-costa-cunha/"
     }
   }
 

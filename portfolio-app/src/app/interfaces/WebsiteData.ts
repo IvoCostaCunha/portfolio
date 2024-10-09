@@ -5,6 +5,7 @@ export interface WebsiteData {
   aboutMe: String
   educationResume: String
   diplomas: Diploma[]
+  projectsResume: string
   projects: Project[]
   contact: {
     tel: string

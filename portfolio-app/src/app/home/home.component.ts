@@ -22,7 +22,7 @@ import { env } from '../environment/env';
 export class HomeComponent implements OnInit {
 
   websiteData: WebsiteData = {
-    aboutMe:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.", 
+    aboutMe:  `Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.`, 
     educationResume: `I did all may studies in Nice, a city in the south of France.
 
     After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time.
@@ -51,7 +51,10 @@ export class HomeComponent implements OnInit {
 
       }
 
-    ],  
+    ],
+    projectsResume: `These are the projects I'd like to highlight.
+
+    If you want a more exhaustive list you  can check the project list on the top left of this site.`,
     projects: [
       {
         title: "portfolio-angular",

@@ -26,10 +26,6 @@ span {
     display: flex;
     align-items: flex-start;
 
-    @media (orientation: portrait) {
-        flex-direction: column;
-    }
-
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 5%;
@@ -37,9 +33,16 @@ span {
     /* box-sizing: border-box; */
 
     height: fit-content;
+    min-height: 100%;
 
     background-color: #FFC470;
 
     font-family: "Montserrat";
     font-size: small;
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
 }

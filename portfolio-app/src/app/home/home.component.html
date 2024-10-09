@@ -8,8 +8,24 @@
                 <a href="#contact"> Contact</a> |
                 <a routerLink="/admin" routerLinkActive="active"> Admin</a>
             </p>
-            <h1> Ivo Costa Cunha </h1>
-            <h2> Developper </h2>
+
+            <div class="name">
+                <h1> Ivo Costa Cunha </h1>
+                <h2> Developper </h2>
+            </div>
+
+            <a id="contact"></a>
+            <h2> Contact </h2>
+            
+            <div>
+                <span> Tel: {{websiteData.contact.tel}} </span><br>
+                <span> Email: {{websiteData.contact.email}} </span>
+
+                <div class="socials-container">
+                    <a href={{websiteData.contact.github}} class="social"> Github icon </a>
+                    <a href={{websiteData.contact.linkedIn}} class="social"> LinkedIn Icon </a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="right-container">
@@ -29,8 +45,8 @@
             <div class="diploma-container">
                 <div *ngFor="let diploma of websiteData.diplomas" class="diploma">
                     <div class="diploma-top">
-                        <span class="diploma-title"> {{diploma.title}} </span>
-                        <span class="diploma-year"> ({{diploma.year}}) </span>
+                        <span class="title"> {{diploma.title}} </span>
+                        <span class="year"> ({{diploma.year}}) </span>
                     </div>
                     <div class="diploma-bottom">
                         <span class="diploma-description"> {{diploma.description}} </span>
@@ -43,14 +59,15 @@
             <a id="projects"></a>
             <h1> Projects </h1>
 
-            <h2 class="diploma-list-title"> Diploma list </h2>
+            <span> {{websiteData.projectsResume}} </span>
+
             <div class="project-container">
                 <div *ngFor="let project of websiteData.projects" class="project">
                     <div class="diploma-top">
-                        <span class="diploma-title"> {{project.title}} </span>
-                        <span class="diploma-year"> ({{project.year}}) </span>
+                        <span class="title"> {{project.title}} </span>
+                        <span class="year"> ({{project.year}}) </span>
                     </div>
-                    <div class="diploma-mid">
+                    <div class="project-mid">
                         <span class="diploma-description"> {{project.description}} </span>
                     </div>
                     <div class="project-bottom">
@@ -60,13 +77,6 @@
 
                 </div>
             </div>
-
-            <a id="contact"></a>
-            <h1> Contact </h1>
-            <p> {{websiteData.contact.tel}} </p>
-            <p> {{websiteData.contact.email}} </p>
-            <p> {{websiteData.contact.github}} </p>
-            <p> {{websiteData.contact.linkedIn}} </p>
 
         </div>
     </div>
