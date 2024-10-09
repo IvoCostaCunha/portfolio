@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
 
 import { env } from '../environment/env'
 
-
-
 @Component({
   selector: 'app-projects-list',
   standalone: true,
