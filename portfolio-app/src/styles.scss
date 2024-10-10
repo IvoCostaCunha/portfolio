@@ -1,0 +1,37 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$light-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$azure-palette
+  ),
+  typography: (
+    plain-family: 'Montserrat',
+    brand-family: 'Montserrat',
+    bold-weight: 'Montserrat',
+    medium-weight: 'Montserrat',
+    regular-weight: 'Montserrat',
+
+  )
+));
+
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$orange-palette,
+    tertiary: mat.$orange-palette
+  ),
+));
+
+html {
+  @include mat.core-theme($light-theme);
+  @include mat.button-theme($light-theme);
+
+  @media (prefers-color-scheme: dark) {
+    @include mat.core-color($dark-theme);
+    @include mat.button-color($dark-theme);
+  }
+}

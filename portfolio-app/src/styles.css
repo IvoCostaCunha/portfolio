@@ -2,13 +2,13 @@
 
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 @font-face {
     font-family: Montserrat;
     src: url("assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Montserrat", "sans-serif"; }
 
 h1 {
     font-size: 1.5em;
@@ -22,6 +22,15 @@ span {
     white-space: pre-line;
     line-height: 1.2em;
     text-align: justify;
+}
+
+button {
+    border-radius: 0%;
+    box-shadow: none;
+    border: none;
+    padding: 3%;
+    text-align: center;
+    background-color: #FFC470;
 }
 
 .container {

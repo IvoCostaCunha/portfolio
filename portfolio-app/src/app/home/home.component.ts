@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { MatButtonModule } from '@angular/material/button';
-
 import { WebsiteData } from '../interfaces/WebsiteData';
 import { env } from '../environment/env';
 
@@ -13,7 +11,6 @@ import { env } from '../environment/env';
   imports: [
     RouterLink, RouterLinkActive,
     CommonModule,
-    MatButtonModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -84,12 +81,9 @@ export class HomeComponent implements OnInit {
   async ngOnInit() {
     console.log("onInit")
     // try {
-    //   let  data = (await this.getData())
+    //   let data = (await this.getData())
     //   console.log(data)
-    //   this.websiteData.aboutme = data.aboutme
-    //   this.websiteData.contact = data.contact
-    //   this.websiteData.education = data.education
-    //   this.websiteData.projects = data.projects   
+    //   this.websiteData = data 
     // } catch(error) {
     //   console.error(error)
     // }
@@ -118,6 +112,10 @@ export class HomeComponent implements OnInit {
 
   async download(path: string): Promise<any> {
     console.log("todo download file")
+  }
+
+  onClickRedirect(url: string): void {
+    window.location.href = url
   }
 
 }
