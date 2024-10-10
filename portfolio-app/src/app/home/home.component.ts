@@ -30,21 +30,21 @@ export class HomeComponent implements OnInit {
         title: "BTS SIO",
         year: "2018",
         description: "Professional diploma from the Lycée Estienne d'Orves (Nice, France).",
-        filePath: "assets/imgs/synthia.jpg"
+        filePath: "../assets/files/bts-sio.pdf"
 
       },
       {
         title: "Licence MIAGE",
         year: "2020",
         description: "Licence MIAGE from the Université Côte d'Azur (Nice, France).",
-        filePath: "assets/imgs/synthia.jpg"
+        filePath: "../assets/files/master-miage.pdf"
 
       },
       {
         title: "Master MIAGE",
         year: "2023",
         description: "Master MIAGE option INTENSE from the Université Côte d'Azur (Nice, France).",
-        filePath: "assets/imgs/synthia.jpg"
+        filePath: "../assets/files/master-miage.pdf"
 
       }
 
@@ -102,16 +102,16 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  onClickDownload(event: Event): void {
+  onClickDownload(path: string): void {
     try {
-      this.download("test")
+      this.openFile(path)
     } catch(e) {
       console.error(e)
     }
   }
 
-  async download(path: string): Promise<any> {
-    console.log("todo download file")
+  async openFile(path: string): Promise<any> {
+    window.open(path)
   }
 
   onClickRedirect(url: string): void {

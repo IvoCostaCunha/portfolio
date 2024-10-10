@@ -50,7 +50,7 @@
         <div class="diploma-bottom">
           <span class="diploma-description"> {{diploma.description}} </span>
           <button 
-          (click)="onClickDownload($event)">
+          (click)="onClickDownload(diploma.filePath)">
             <i class="bi bi-arrow-down-circle-fill"></i> Download PDF
           </button>
         </div>
