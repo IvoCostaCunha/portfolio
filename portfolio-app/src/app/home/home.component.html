@@ -1,83 +1,82 @@
 <div class="container">
-    <div class="left-container">
-        <div class="left-content">
-            <p> <a href="#about-me"> About me</a> |
-                <a href="#education"> Education</a> |
-                <a href="#projects"> Projects</a> <a routerLink="/projects-list" routerLinkActive="active"> (list) </a>
-                |
-                <a href="#contact"> Contact</a> |
-                <a routerLink="/admin" routerLinkActive="active"> Admin</a>
-            </p>
+  <div class="left-container">
+    <p> <a href="#about-me"> About me</a> |
+      <a href="#education"> Education</a> |
+      <a href="#projects"> Projects</a> <a routerLink="/projects-list" routerLinkActive="active"> (list) </a>
+      |
+      <a href="#contact"> Contact</a> |
+      <a routerLink="/admin" routerLinkActive="active"> Admin</a>
+    </p>
 
-            <div class="name">
-                <h1> Ivo Costa Cunha </h1>
-                <h2> Developper </h2>
-            </div>
-
-            <a id="contact"></a>
-            <h2> Contact </h2>
-            
-            <div>
-                <span> Tel: {{websiteData.contact.tel}} </span><br>
-                <span> Email: {{websiteData.contact.email}} </span>
-
-                <div class="socials-container">
-                    <a href={{websiteData.contact.github}} class="social"> Github icon </a>
-                    <a href={{websiteData.contact.linkedIn}} class="social"> LinkedIn Icon </a>
-                </div>
-            </div>
-        </div>
+    <div class="name">
+      <h1> Ivo Costa Cunha </h1>
+      <h2> Developper </h2>
     </div>
-    <div class="right-container">
-        <div class="right-content">
-            <a id="about-me"></a>
-            <h1> About me </h1>
-            <p>
-                {{websiteData.aboutMe}}
-            </p>
 
-            <a id="education"></a>
-            <h1> Education </h1>
+    <a id="contact"></a>
+    <h2> Contact </h2>
 
-            <span> {{websiteData.educationResume}} </span>
+    <div>
+      <span> Tel: {{websiteData.contact.tel}} </span><br>
+      <span> Email: {{websiteData.contact.email}} </span>
 
-            <h2 class="diploma-list-title"> Diploma list </h2>
-            <div class="diploma-container">
-                <div *ngFor="let diploma of websiteData.diplomas" class="diploma">
-                    <div class="diploma-top">
-                        <span class="title"> {{diploma.title}} </span>
-                        <span class="year"> ({{diploma.year}}) </span>
-                    </div>
-                    <div class="diploma-bottom">
-                        <span class="diploma-description"> {{diploma.description}} </span>
-                        <button mat-raised-button (click)="onClickDownload($event)"> Download PDF </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <a id="projects"></a>
-            <h1> Projects </h1>
-
-            <span> {{websiteData.projectsResume}} </span>
-
-            <div class="project-container">
-                <div *ngFor="let project of websiteData.projects" class="project">
-                    <div class="diploma-top">
-                        <span class="title"> {{project.title}} </span>
-                        <span class="year"> ({{project.year}}) </span>
-                    </div>
-                    <div class="project-mid">
-                        <span class="diploma-description"> {{project.description}} </span>
-                    </div>
-                    <div class="project-bottom">
-                        <a href="{{project.link}}" class="project-links"> Link Icon </a>
-                        <a href="{{project.githubLink}}" class="project-links"> Github Link Icon </a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+      <div class="socials-container">
+        <a href={{websiteData.contact.github}} class="social"> Github icon </a>
+        <a href={{websiteData.contact.linkedIn}} class="social"> LinkedIn Icon </a>
+      </div>
     </div>
+  </div>
+  <div class="right-container">
+    <a id="about-me"></a>
+    <h1> About me </h1>
+    <p>
+      {{websiteData.aboutMe}}
+    </p>
+
+    <a id="education"></a>
+    <h1> Education </h1>
+
+    <span> {{websiteData.educationResume}} </span>
+
+    <h2 class="diploma-list-title"> Diploma list </h2>
+    <div class="diploma-container">
+      <div *ngFor="let diploma of websiteData.diplomas" class="diploma">
+        <div class="diploma-top">
+          <span class="title"> {{diploma.title}} </span>
+          <span class="year"> ({{diploma.year}}) </span>
+        </div>
+        <div class="diploma-bottom">
+          <span class="diploma-description"> {{diploma.description}} </span>
+          <button mat-raised-button (click)="onClickDownload($event)"> Download PDF </button>
+        </div>
+
+      </div>
+    </div>
+
+    <a id="projects"></a>
+    <h1> Projects </h1>
+
+    <span> {{websiteData.projectsResume}} </span>
+
+    <div class="project-container">
+      <div *ngFor="let project of websiteData.projects" class="project">
+        <div class="diploma-top">
+          <span class="title"> {{project.title}} </span>
+          <span class="year"> ({{project.year}}) </span>
+        </div>
+        <div class="project-mid">
+          <span class="diploma-description"> {{project.description}} </span>
+        </div>
+        <div class="project-bottom">
+          <a href="{{project.link}}" class="project-links"> Link Icon </a>
+          <a href="{{project.githubLink}}" class="project-links"> Github Link Icon </a>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="footer">
+      <span> Copyright &copy; Ivo Costa Cunha - Done with Angular v18.2 </span>
+    </div>
+  </div>
 </div>
