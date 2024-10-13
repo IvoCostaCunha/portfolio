@@ -18,13 +18,24 @@ import { env } from '../environment/env';
 
 export class HomeComponent implements OnInit {
 
+
+
   websiteData: WebsiteData = {
-    aboutMe:  `Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.`, 
-    educationResume: `I did all may studies in Nice, a city in the south of France.
+    aboutMe:  `Hello, my name is Ivo Costa Cunha.  I'm a developper by trade, currenly looking for opportunities, in a company or as a freelance.<br
+    By the way if you think I could do some work for you do not hesitate to contact me.<br>
+    I'm a curious person, often side tracked on my projects by the curiosity of implementing x or y function that is most of the time not really vital to the project. Well at least in my personnal project, in a more professional setting I follow guidelines.<br>
+    I support a free web, free of surveillance, because most the time the only harmed persons are those who are innocent, real criminals already know how to hide their activities.</br>
+    I would recommend anyone to encrypt their data the best they can even if it's harmless, at least it can slow down surveillance systems and in case of a security breach on your cloud provider your data has more chance to not be sold in the dark web.<br>
+    For anyone interrested check <a href="https://emailselfdefense.fsf.org/en/">email self defence</a>.<br>
 
-    After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time.
 
-    Since I liked it I followed with a MIAGE Licence that mixed software development with company management, and after that I got a Master in MIAGE option INTENSE. It's mostly the continuation of the previous licence.`,
+    `, 
+    photoPath: "../assets/imgs/me.jpeg",
+    educationResume: `I did all my education in Nice, a city in the south of France.<br>
+    After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time.<br>
+    Since I liked it I followed with a MIAGE Licence that mixed software development with company management, and after that I got a Master in MIAGE option INTENSE. It's mostly the continuation of the previous licence.<br>
+    During my licence and master, I learned a lot about applicative developpement but also a lot about teamwork, team management, comptability, process modelling or presentations.<br>
+    So while MIAGE was about developpement it was also about a lot more.`,
     diplomas: [
       {
         title: "BTS SIO",

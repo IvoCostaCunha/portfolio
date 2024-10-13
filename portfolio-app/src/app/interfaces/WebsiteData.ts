@@ -3,6 +3,7 @@ import { Project } from "./Project"
 
 export interface WebsiteData {
   aboutMe: String
+  photoPath: String
   educationResume: String
   diplomas: Diploma[]
   projectsResume: string

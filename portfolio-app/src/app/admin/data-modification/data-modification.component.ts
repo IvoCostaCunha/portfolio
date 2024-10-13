@@ -22,7 +22,8 @@ import { env } from '../../environment/env';
 export class DataModificationComponent implements OnInit{
   @Output() isValidated = new EventEmitter<string>()
   websiteData: WebsiteData = {
-    aboutMe:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.", 
+    aboutMe:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.",
+    photoPath: "",
     educationResume: `I did all may studies in Nice, a city in the south of France.
 
     After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time.

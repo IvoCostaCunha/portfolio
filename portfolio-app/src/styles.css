@@ -7,8 +7,24 @@
     src: url("assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: "Montserrat", "sans-serif"; }
+:root {
+    --color-background: #FFC470; 
+    --color-containerA: #4793AF;
+    --color-containerB: #DD5746;
+    --color-button: white;
+    --color-tag: rgb(255, 255, 255);
+    --color-font: black;
+    --color-line: rgb(0, 0, 0);
+}
+
+html, body { 
+    margin: 0;
+    height: 100%;
+}
+
+body {
+     font-family: "Montserrat", "sans-serif"; 
+}
 
 h1 {
     font-size: 1.5em;
@@ -18,42 +34,65 @@ h2 {
     font-size: 1.2em;
 }
 
-span {
-    white-space: pre-line;
-    line-height: 1.2em;
-    text-align: justify;
-}
 
 button {
-    border-radius: 0%;
+    border-radius: 0.5em;
     box-shadow: none;
     border: none;
-    padding: 3%;
     text-align: center;
-    background-color: #FFC470;
+    background-color: var(--color-button);
+
+    padding: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+
+    font-family: "Montserrat";
+    font-size: medium;
+
+}
+
+span {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+
+}
+
+br {
+    margin-bottom: 0.5em;
 }
 
 .container {
+    box-sizing: border-box; 
     display: flex;
     align-items: flex-start;
 
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    /* box-sizing: border-box; */
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
 
-    height: fit-content;
+    height: fit-content; 
     min-height: 100%;
 
-    background-color: #FFC470;
+    background-color: var(--color-background);
 
     font-family: "Montserrat";
-    font-size: small;
+    font-size: medium;
 
-    @media (orientation: portrait) {
+    @media (orientation: portrait), (max-width: 900px) {
         flex-direction: column;
-        padding-left: 1%;
-        padding-right: 1%;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
+}
+
+.paragraphs {
+    line-height: 1.2em;
+    text-align: justify;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.menu {
+    text-align: center;
 }
