@@ -1,14 +1,17 @@
 import { Diploma } from "./Diploma"
 import { Project } from "./Project"
+import { Skill } from "./Skill"
 
 export interface WebsiteData {
-  aboutMeA: String
-  aboutMeB: String
+  siteIntro: String
+  aboutMe: String
   beliefs: String
+  freelance: String
   photoPath: String
-  educationResume: String
+  skills: Skill[]
+  educationIntro: String
   diplomas: Diploma[]
-  projectsResume: string
+  projectsIntro: string
   projects: Project[]
   contact: {
     tel: string

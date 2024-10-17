@@ -67,7 +67,11 @@ button {
 
     font-family: "Montserrat";
     font-size: medium;
-
+}
+button:hover {
+    transition: 250ms;
+    background-color: var(--color-containerB);
+    transform: translate(0em, -0.2em);
 }
 
 span {

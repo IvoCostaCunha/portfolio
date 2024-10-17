@@ -22,15 +22,27 @@ import { env } from '../../environment/env';
 export class DataModificationComponent implements OnInit{
   @Output() isValidated = new EventEmitter<string>()
   websiteData: WebsiteData = {
-    aboutMeA:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.",
+    skills: [
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+      {name: "HTML", rating: 4},
+    ],
+    siteIntro:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.",
     photoPath: "",
-    educationResume: `I did all may studies in Nice, a city in the south of France.
+    educationIntro: `I did all may studies in Nice, a city in the south of France.
 
     After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time.
 
     Since I liked it I followed with a MIAGE Licence that mixed software development with company management, and after that I got a Master in MIAGE option INTENSE. It's mostly the continuation of the previous licence.`,
-    aboutMeB: "",
+    aboutMe: "",
     beliefs: "",
+    freelance: "",
     diplomas: [
       {
         title: "BTS SIO",
@@ -55,7 +67,7 @@ export class DataModificationComponent implements OnInit{
       }
 
     ],
-    projectsResume: `These are the projects I'd like to highlight.
+    projectsIntro: `These are the projects I'd like to highlight.
 
     If you wantt a more exhaustive list you  can check the project list on the top left of this site.`,
     projects: [

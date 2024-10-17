@@ -1,11 +1,11 @@
-<a id="about-me"></a>
 <div class="container">
   <div class="left-container">
     <div class="menu">
       <div>
-        <a href="#about-me"> About me</a> |
-        <a href="#education"> Education</a> |
-        <a href="#projects"> Projects</a>
+        <a href=""> Home </a> |
+        <a href="#about-me"> About me </a> |
+        <a href="#education"> Education </a> |
+        <a href="#projects"> Projects </a>
       </div>
       <!-- <div>
         <a routerLink="/projects-list" routerLinkActive="active"> Projects list </a> |
@@ -38,12 +38,17 @@
   </div>
   <div class="right-container">
 
-    <h1> About me </h1>
-    <div [innerHTML]="websiteData.aboutMeA"></div>
+    <h1> About this website </h1>
+    <div class="paragraphs" [innerHTML]="websiteData.siteIntro"></div>
+
     <div class="about-me-container">
-      <div class="aboutme-paragraphs paragraphs" [innerHTML]="websiteData.aboutMeB"></div>
+      <div>
+        <a id="about-me"></a>
+        <h1> About me </h1>
+        <div class="paragraphs aboutme-paragraphs" [innerHTML]="websiteData.aboutMe"></div>
+      </div>
       <figure class="figures">
-        <img src={{websiteData.photoPath}} class="photo"/>
+        <img src={{websiteData.photoPath}} class="photo" />
         <caption> Me in such a dramatic situation !</caption>
       </figure>
     </div>
@@ -51,10 +56,21 @@
     <h1> Beliefs </h1>
     <div class="paragraphs" [innerHTML]="websiteData.beliefs"></div>
 
+    <h1> Me as freelance </h1>
+    <div [innerHTML]="websiteData.freelance" class="paragraphs"></div>
+
+    <h1> Skills </h1>
+    <div class="tag-container">
+      <div *ngFor="let skill of websiteData.skills" [style]="getGradient(skill.rating)"
+      class="tag">
+        {{skill.name}} | <i class="bi bi-stars"></i> {{skill.rating}}%
+      </div>
+    </div>
+
     <a id="projects"></a>
     <h1> Projects </h1>
 
-    <div class="paragraphs" [innerHTML]="websiteData.projectsResume"> </div>
+    <div class="paragraphs" [innerHTML]="websiteData.projectsIntro"> </div>
 
     <div class="project-container">
       <div *ngFor="let project of websiteData.projects" class="project">
@@ -64,9 +80,9 @@
         </div>
 
         <span [innerHTML]="project.description"></span>
-        
+
         <div class="project-mid">
-          <img class="project-img" loading="lazy" [src]="project.img"/>
+          <img class="project-img" loading="lazy" [src]="project.img" />
           <div class="tag-container">
             <div *ngFor="let tag of project.tags" class="tag"> {{tag}} </div>
           </div>
@@ -86,7 +102,7 @@
     <a id="education"></a>
     <h1> Education </h1>
 
-    <div [innerHTML]="websiteData.educationResume" class="paragraphs"></div>
+    <div [innerHTML]="websiteData.educationIntro" class="paragraphs"></div>
 
     <h2 class="diploma-list-title"> Diploma list </h2>
     <div class="diploma-container">
@@ -96,8 +112,7 @@
           <span class="year" [innerHTML]="diploma.year"></span>
         </div>
         <div class="diploma-bottom">
-          <span class="diploma-description"
-          [innerHTML]="diploma.description"></span>
+          <span class="diploma-description" [innerHTML]="diploma.description"></span>
           <button class="diploma-download-button" (click)="onClickDownload(diploma.filePath)">
             <i class="bi bi-arrow-down-circle-fill"></i> PDF
           </button>
