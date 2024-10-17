@@ -2,7 +2,9 @@ import { Diploma } from "./Diploma"
 import { Project } from "./Project"
 
 export interface WebsiteData {
-  aboutMe: String
+  aboutMeA: String
+  aboutMeB: String
+  beliefs: String
   photoPath: String
   educationResume: String
   diplomas: Diploma[]

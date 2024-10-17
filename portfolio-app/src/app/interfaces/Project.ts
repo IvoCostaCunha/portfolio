@@ -3,6 +3,7 @@ export interface Project {
   year: string
   tags: string[]
   link: string
+  img: string
   githubLink: string
   description: string
 }

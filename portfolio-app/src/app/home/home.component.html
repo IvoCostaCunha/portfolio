@@ -7,10 +7,10 @@
         <a href="#education"> Education</a> |
         <a href="#projects"> Projects</a>
       </div>
-      <div>
+      <!-- <div>
         <a routerLink="/projects-list" routerLinkActive="active"> Projects list </a> |
         <a routerLink="/admin" routerLinkActive="active"> Admin</a>
-      </div>
+      </div> -->
     </div>
 
     <div class="name">
@@ -39,35 +39,17 @@
   <div class="right-container">
 
     <h1> About me </h1>
+    <div [innerHTML]="websiteData.aboutMeA"></div>
     <div class="about-me-container">
-      <div class="aboutme-paragraphs paragraphs" [innerHTML]="websiteData.aboutMe"></div>
-      <img src={{websiteData.photoPath}} class="photo" />
+      <div class="aboutme-paragraphs paragraphs" [innerHTML]="websiteData.aboutMeB"></div>
+      <figure class="figures">
+        <img src={{websiteData.photoPath}} class="photo"/>
+        <caption> Me in such a dramatic situation !</caption>
+      </figure>
     </div>
 
-
-
-    <a id="education"></a>
-    <h1> Education </h1>
-
-    <div [innerHTML]="websiteData.educationResume" class="paragraphs"></div>
-
-    <h2 class="diploma-list-title"> Diploma list </h2>
-    <div class="diploma-container">
-      <div *ngFor="let diploma of websiteData.diplomas" class="diploma">
-        <div class="title-top">
-          <span class="title"> {{diploma.title}} </span>
-          <span class="year"> ({{diploma.year}}) </span>
-        </div>
-        <div class="diploma-bottom">
-          <span class="diploma-description"
-          [innerHTML]="diploma.description"></span>
-          <button class="diploma-download-button" (click)="onClickDownload(diploma.filePath)">
-            <i class="bi bi-arrow-down-circle-fill"></i> PDF
-          </button>
-        </div>
-
-      </div>
-    </div>
+    <h1> Beliefs </h1>
+    <div class="paragraphs" [innerHTML]="websiteData.beliefs"></div>
 
     <a id="projects"></a>
     <h1> Projects </h1>
@@ -77,14 +59,17 @@
     <div class="project-container">
       <div *ngFor="let project of websiteData.projects" class="project">
         <div class="title-top">
-          <span class="title"> {{project.title}} </span>
-          <span class="year"> ({{project.year}}) </span>
+          <span class="title" [innerHTML]="project.title"></span>
+          <span class="year" [innerHTML]="project.year"></span>
         </div>
+
+        <span [innerHTML]="project.description"></span>
+        
         <div class="project-mid">
-          <span class="diploma-description"> {{project.description}} </span>
-        </div>
-        <div class="tag-container">
-          <span *ngFor="let tag of project.tags" class="tag"> {{tag}} </span>
+          <img class="project-img" loading="lazy" [src]="project.img"/>
+          <div class="tag-container">
+            <div *ngFor="let tag of project.tags" class="tag"> {{tag}} </div>
+          </div>
         </div>
         <div class="project-bottom">
           <button class="project-links" (click)="onClickRedirect(project.githubLink)">
@@ -98,8 +83,31 @@
       </div>
     </div>
 
-    <div class="footer">
-      <span> Copyright &copy; Ivo Costa Cunha - Done with Angular v18.2 and a some CSS </span>
+    <a id="education"></a>
+    <h1> Education </h1>
+
+    <div [innerHTML]="websiteData.educationResume" class="paragraphs"></div>
+
+    <h2 class="diploma-list-title"> Diploma list </h2>
+    <div class="diploma-container">
+      <div *ngFor="let diploma of websiteData.diplomas" class="diploma">
+        <div class="title-top">
+          <span class="title" [innerHTML]="diploma.title"></span>
+          <span class="year" [innerHTML]="diploma.year"></span>
+        </div>
+        <div class="diploma-bottom">
+          <span class="diploma-description"
+          [innerHTML]="diploma.description"></span>
+          <button class="diploma-download-button" (click)="onClickDownload(diploma.filePath)">
+            <i class="bi bi-arrow-down-circle-fill"></i> PDF
+          </button>
+        </div>
+
+      </div>
     </div>
+
+    <footer>
+      <span> Copyright &copy; Ivo Costa Cunha - Done with Angular v18.2 and a some CSS </span>
+    </footer>
   </div>
 </div>

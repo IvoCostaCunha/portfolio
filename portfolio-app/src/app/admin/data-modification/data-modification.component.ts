@@ -22,13 +22,15 @@ import { env } from '../../environment/env';
 export class DataModificationComponent implements OnInit{
   @Output() isValidated = new EventEmitter<string>()
   websiteData: WebsiteData = {
-    aboutMe:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.",
+    aboutMeA:  "Hello, my name is Ivo Costa Cunha and I'm a developper mostly in web apps, but I sometimes prefer backend stuff.",
     photoPath: "",
     educationResume: `I did all may studies in Nice, a city in the south of France.
 
     After my scientific "Baccalauréat" I did a professional diploma, a "BTS" in France, that allowed me to learn about OOP (Object Oriented Paradigm) with C# at the time.
 
     Since I liked it I followed with a MIAGE Licence that mixed software development with company management, and after that I got a Master in MIAGE option INTENSE. It's mostly the continuation of the previous licence.`,
+    aboutMeB: "",
+    beliefs: "",
     diplomas: [
       {
         title: "BTS SIO",
@@ -63,6 +65,7 @@ export class DataModificationComponent implements OnInit{
         tags: ["angular", "css", "nodejs", "frontend", "backend", "web", "typescript"],
         link: "https://ivocostacunha-portfolio.com",
         githubLink: "https://github.com/IvoCostaCunha/portfolio-angular",
+        img: "",
         description: "My personnal portfolio to present myself and list my projects."
       },
       {
@@ -71,6 +74,7 @@ export class DataModificationComponent implements OnInit{
         tags: ["web component", "web","javascript", "webaudio"],
         link: "",
         githubLink: "https://github.com/IvoCostaCunha/audio-player",
+        img: "",
         description: "Audio-player project that allows to play music in the web with webaudio, and modify the music signal live."
       }
     ], 
