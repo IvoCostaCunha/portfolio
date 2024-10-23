@@ -2,6 +2,9 @@
 
 env_secret.ts
 
+# Web host config files
+heroku.yml
+
 # Compiled output
 /dist
 /tmp

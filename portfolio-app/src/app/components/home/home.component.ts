@@ -114,7 +114,7 @@ export class HomeComponent implements OnInit {
         year: "2023",
         tags: ["Angular", "Typescript", "Express", "Docker", "CSS"],
         link: "https://ivocostacunha-portfolio.com",
-        githubLink: "https://github.com/IvoCostaCunha/portfolio-angular.git",
+        githubLink: "https://github.com/IvoCostaCunha/portfolio.git",
         doc: "",
         imgs: ["assets/imgs/portfolio-app/portfolio-app.png"],
         description: "My personnal portfolio to present myself and my projects. This website in fact. For now just a frontend without any backend but I'm looking for improving it in the future."
