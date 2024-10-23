@@ -1,4 +1,5 @@
-import { Diploma } from "./Diploma"
+import { Contact } from "./Contact"
+import { Certification } from "./Certification"
 import { Project } from "./Project"
 import { Skill } from "./Skill"
 
@@ -10,13 +11,8 @@ export interface WebsiteData {
   photoPath: String
   skills: Skill[]
   educationIntro: String
-  diplomas: Diploma[]
+  certifications: Certification[]
   projectsIntro: string
   projects: Project[]
-  contact: {
-    tel: string
-    email: string
-    github: string
-    linkedIn: string
-  }
+  contact: Contact
 }

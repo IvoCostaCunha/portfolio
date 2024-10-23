@@ -1,0 +1,24 @@
+FROM node:alpine AS node_modules_step
+# ENV FOO=/bar
+# for environment variables
+WORKDIR /usr/node/
+COPY ./package-lock.json .
+COPY ./package.json .
+RUN npm i
+
+FROM node:alpine as build_step
+WORKDIR /usr/node
+COPY --from=node_modules_step /usr/node/node_modules ./node_modules
+RUN npm run build
+
+FROM node:alpine as delivery_step
+WORKDIR /usr/node
+COPY --from=build_step /usr/node/dist ./dist  
+# Copying builded files into /usr/node/dist
+COPY --from=node_modules_step /usr/node/node_modules ./ 
+# Copying node_modules into /usr/node/
+COPY /usr/node/Portfolio-app/server.js  .
+# Copying server.js from current directory
+
+EXPOSE 443
+ENTRYPOINT ["node", "server.js"]

@@ -1,0 +1,24 @@
+<div class="name">
+  <h1> Ivo Costa Cunha </h1>
+  <h2> Developper </h2>
+</div>
+<h2> Contact </h2>
+<div>
+  <span> Tel: {{contact.tel}} </span><br>
+  <span> Email: 
+    {{contact.mail}}
+  </span>
+  <div class="socials-container">
+    <button class="social" (click)="onClickSendMail(contact.mail)">
+      <i class="bi bi-envelope-at-fill"></i> 
+    </button>
+    <button class="social" (click)="onClickRedirect(contact.github)">
+      <i class="bi bi-github"></i>
+      Github
+    </button>
+    <button class="social" (click)="onClickRedirect(contact.linkedIn)">
+      <i class="bi bi-linkedin"></i>
+      LinkedIn
+    </button>
+  </div>
+</div>

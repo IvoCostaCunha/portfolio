@@ -1,5 +1,4 @@
 // * This file contains users data requests and posts * //
-
 const fs = require("fs").promises
 const { constants } = require("buffer")
 

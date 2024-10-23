@@ -1,0 +1,7 @@
+<h1> Skills </h1>
+<div class="skill-container vm">
+  <div *ngFor="let skill of skills" [style]="getGradient(skill.rating)"
+  class="tag">
+    {{skill.name}} | <i class="bi bi-stars"></i> {{skill.rating}}%
+  </div>
+</div>

@@ -1,27 +1,32 @@
-# PortfolioApp
+# Portfolio-app
+This Angular app is my current portfolio frontend. It's not finished, a lot still needs to be done, it's more like a base for future updates, if I don't decide to rewrite it in React.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+I use [Express](https://github.com/expressjs/express.git) as a server.
 
-## Development server
+# Requirements
+- [NodeJS](https://nodejs.org/en) (Tested with node@22.10.0)
+- [Docker](https://www.docker.com/) (Tested with docker@27.2.0) (Optional)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+The easier way to install this app is via docker and it also provides the most optimised installation since I only serve via express the minimum.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I use the port 80 since it's the http port, so either make sure it's available on your end.
+Or change it in :
+- server.js (Express config)
+- Docker port forwarding (Replace 80:80 by 8080:80 for example)
 
-## Build
+### Docker
+```sh
+docker build -t me/portfolio:latest .
+docker docker run -p 80:80 me/portfolio:latest
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Without Docker
+```sh
+npm i
+npm run build
+node dist/browser
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Either way the website will then be accessible at http://127.0.0.1:80.

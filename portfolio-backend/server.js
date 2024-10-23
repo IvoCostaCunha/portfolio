@@ -10,7 +10,7 @@ const {expressjwt: jwt} = require('express-jwt')
 const swaggerUi = require('swagger-ui-express');
 const swaggerDoc = require("./app/doc/swagger.json");
 
-const port = 8080
+const port = process.env.PORT || 8080
 const app = express()
 
 const log = function (req, res, next) {
@@ -50,7 +50,7 @@ const corsOptions = {
     }
 }
 
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
 app.use( session({
     secret: "secret",
     resave: false,

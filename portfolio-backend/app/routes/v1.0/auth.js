@@ -1,5 +1,4 @@
 // * This file contains users data requests and posts * //
-
 const users = require("./users")
 const logs = require("../../utils/logs")
 

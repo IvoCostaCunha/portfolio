@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="left-container">
+    <app-menu></app-menu>
+    <app-contact [contact]="websiteData.contact"></app-contact>
+  </div>
+  <div class="right-container">
+
+    <h1 class="align"> About this website </h1>
+    <div class="paragraphs" [innerHTML]="websiteData.siteIntro"></div>
+
+    <div class="about-me-container vm">
+      <div>
+        <a id="about-me"></a>
+        <h1> About me </h1>
+        <div class="paragraphs aboutme-paragraphs" [innerHTML]="websiteData.aboutMe"></div>
+      </div>
+      <figure class="figures" alt="me-figure">
+        <img tabindex="0" src={{websiteData.photoPath}} alt="me" class="photo" />
+        <caption> Me in such a dramatic situation !</caption>
+      </figure>
+    </div>
+
+    <h1> Beliefs </h1>
+    <div class="paragraphs" [innerHTML]="websiteData.beliefs"></div>
+
+    <h1> Me as freelance </h1>
+    <div [innerHTML]="websiteData.freelance" class="paragraphs"></div>
+
+    <a id="projects"></a>
+    <app-skill-container [skills]="websiteData.skills"></app-skill-container>
+    <h1> Projects </h1>
+    <div class="paragraphs" [innerHTML]="websiteData.projectsIntro"> </div>
+    <div class="project-container">
+        <app-project *ngFor="let p of websiteData.projects" [project]="p"></app-project>
+    </div>
+
+    <a id="education"></a>
+    <h1> Education </h1>
+    <div [innerHTML]="websiteData.educationIntro" class="paragraphs"></div>
+    <app-certifications [certifications]="websiteData.certifications"></app-certifications>
+    <app-footer></app-footer>
+  </div>
+</div>

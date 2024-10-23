@@ -1,30 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
 @font-face {
-    font-family: Montserrat;
-    src: url("assets/fonts/Montserrat-VariableFont_wght.ttf");
+    font-family: confortaa-regular;
+    src: url("fonts/confortaa/Comfortaa-Regular.ttf");
 }
 
-/* :root {
-    --color-background: #FFC470; 
-    --color-containerA: #4793AF;
-    --color-containerB: #DD5746;
-    --color-button: white;
-    --color-tag: rgb(255, 255, 255);
-    --color-font: black;
-    --color-line: rgb(0, 0, 0);
-} */
+@font-face {
+    font-family: confortaa-bold;
+    src: url("fonts/confortaa/Comfortaa-Bold.ttf");
+}
 
-:root {
-    --color-background: #FAF7F0; 
-    --color-containerA: #B7B7B7;
-    --color-containerB: #D8D2C2;
-    --color-button: #F5F5F7;
-    --color-tag: #F5F5F7;
-    --color-font: black;
-    --color-line: rgb(0, 0, 0);
+@font-face {
+    font-family: agenorneue-regular;
+    src: url("fonts/agenorneue/AgenorNeue-Regular.otf")
+}
+
+@font-face {
+    font-family: nextart-semibold;
+    src: url("fonts/next-art/NEXT\ ART_SemiBold.otf");
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #243D42; 
+        --color-containerA: #243D42;
+        --color-containerB: #243D42;
+        --color-subcontainer-background: #393D5A;
+        --color-subcontainer-border: white;
+        --color-accentA: #F54642;
+        --color-accentB: #F51F01;
+        --color-accentC: #614866;
+        --color-font: white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-background: #F2F2F2;; 
+        --color-containerA: #F2F2F2;
+        --color-containerB: #F2F2F2;
+        --color-subcontainer-background: #D9D9D9;
+        --color-subcontainer-border: #D9D9D9;
+        --color-accentA: #99AABF;
+        --color-accentB: #5496BF;
+        --color-accentC: #5496BF;
+        --color-font: black;
+    }
 }
 
 html, body { 
@@ -33,25 +54,28 @@ html, body {
 }
 
 body {
-     font-family: "Montserrat", "sans-serif"; 
+     font-family: "agenorneue-regular"; 
+     font-size: medium; 
+     color: var(--color-font);
 }
 
 h1 {
+    font-family: "nextart-semibold";
     font-size: 1.5em;
 }
 
 h2 {
+    font-family: "confortaa-bold";
     font-size: 1.2em;
 }
 
-footer {
-    flex: 1 1 auto;
-    margin-top: 2em;
-    padding: 1em;
-    font-size: 1em;
-    border-radius: 1em;
+caption {
+    font-family: "agenorneue-regular";
+    font-size: small;
+    font-style: italic;
     text-align: center;
-    background-color: var(--color-containerA);
+    width: fit-content;
+    margin-top: 0.5em;
 }
 
 button {
@@ -59,33 +83,30 @@ button {
     box-shadow: none;
     border: none;
     text-align: center;
-    background-color: var(--color-button);
+    background-color: var(--color-accentA);
 
     padding: 0.5em;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 
-    font-family: "Montserrat";
+    font-family: "agenorneue-regular";
     font-size: medium;
+    color: var(--color-font);
 }
 button:hover {
     transition: 250ms;
-    background-color: var(--color-containerB);
+    background-color: var(--color-accentB);
     transform: translate(0em, -0.2em);
+}
+
+a {
+    color: var(--color-font);
 }
 
 span {
     margin-bottom: 0.5em;
     margin-top: 0.5em;
 
-}
-
-caption {
-    font-size: small;
-    font-style: italic;
-    text-align: center;
-    width: fit-content;
-    margin-top: 0.5em;
 }
 
 br {
@@ -97,8 +118,8 @@ br {
     display: flex;
     align-items: flex-start;
 
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
     padding-top: 2.5em;
     padding-bottom: 2.5em;
 
@@ -106,9 +127,6 @@ br {
     min-height: 100%;
 
     background-color: var(--color-background);
-
-    font-family: "Montserrat";
-    font-size: medium;
 
     @media (orientation: portrait), (max-width: 1100px) {
         flex-direction: column;
@@ -124,6 +142,12 @@ br {
     margin-bottom: 1em;
 }
 
-.menu {
-    text-align: center;
+.vm {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.hvm {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
