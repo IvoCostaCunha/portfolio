@@ -4,7 +4,6 @@
   padding: 1em;
   margin-top: 0.5em;
   border-radius: 1em;
-  flex: 1 1 auto;
 }
 
 .project-top {
@@ -16,14 +15,12 @@
 }
 
 .title {
-  flex: 1 1 auto;
   text-align: left;
   font-weight: 600;
 
 }
 
 .year {
-  flex: 1 1 auto;
   text-align: right;
   font-weight: 600;
 }
@@ -54,6 +51,7 @@
 
 .project-img:hover {
   transform: translate(0, -0.1em);
+  cursor: pointer;
 }
 
 .project-bottom {
@@ -63,7 +61,6 @@
 }
 
 .project-links {
-  flex: 1 1 auto;
   max-width: fit-content;
   margin: 0.2em;
   padding: 0.5em;

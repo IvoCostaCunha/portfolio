@@ -4,40 +4,27 @@
     <app-contact [contact]="websiteData.contact"></app-contact>
   </div>
   <div class="right-container">
+    <app-about-me [aboutMeHTML]="websiteData.aboutMeHTML" [workMethodsHTML]="websiteData.workMethodsHTML" [mePhotoPath]="websiteData.mePhotoPath"></app-about-me>
 
-    <h1 class="align"> About this website </h1>
-    <div class="paragraphs" [innerHTML]="websiteData.siteIntro"></div>
+    <h1>Beliefs</h1>
+    <div class="paragraphs" [innerHTML]="websiteData.beliefsHTML"></div>
 
-    <div class="about-me-container vm">
-      <div>
-        <a id="about-me"></a>
-        <h1> About me </h1>
-        <div class="paragraphs aboutme-paragraphs" [innerHTML]="websiteData.aboutMe"></div>
-      </div>
-      <figure class="figures" alt="me-figure">
-        <img tabindex="0" src={{websiteData.photoPath}} alt="me" class="photo" />
-        <caption> Me in such a dramatic situation !</caption>
-      </figure>
-    </div>
+    <h1>Me as freelance</h1>
+    <div [innerHTML]="websiteData.freelanceHTML" class="paragraphs"></div>
 
-    <h1> Beliefs </h1>
-    <div class="paragraphs" [innerHTML]="websiteData.beliefs"></div>
-
-    <h1> Me as freelance </h1>
-    <div [innerHTML]="websiteData.freelance" class="paragraphs"></div>
+    <app-language-container [languages]="websiteData.languages"></app-language-container>
 
     <a id="projects"></a>
     <app-skill-container [skills]="websiteData.skills"></app-skill-container>
-    <h1> Projects </h1>
-    <div class="paragraphs" [innerHTML]="websiteData.projectsIntro"> </div>
+    <h1>Projects</h1>
+    <div class="paragraphs" [innerHTML]="websiteData.projectsIntroHTML"> </div>
     <div class="project-container">
         <app-project *ngFor="let p of websiteData.projects" [project]="p"></app-project>
     </div>
 
     <a id="education"></a>
-    <h1> Education </h1>
-    <div [innerHTML]="websiteData.educationIntro" class="paragraphs"></div>
-    <app-certifications [certifications]="websiteData.certifications"></app-certifications>
+    <app-education [eduIntroHTML]="websiteData.eduIntroHTML" [eduPhotoPath]="websiteData.eduPhotoPath" [certifications]="websiteData.certifications"></app-education>
+
     <app-footer></app-footer>
   </div>
 </div>

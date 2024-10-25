@@ -1,5 +1,6 @@
 # Portfolio-app
 This Angular app is my current portfolio frontend. It's not finished, a lot still needs to be done, it's more like a base for future updates, if I don't decide to rewrite it in React.
+This frontend may in the future be connected to an [API](https://github.com/IvoCostaCunha/portfolio-api.git) but for now I'm trying to get this part right.
 
 I use [Express](https://github.com/expressjs/express.git) as a server.
 

@@ -2,7 +2,10 @@
   text-align: center;
 }
 
-.menu-link {
+.menu-links {
   text-decoration: none;
-  color: var(--color-font);
+}
+
+.menu-links:hover {
+  text-decoration: underline;
 }

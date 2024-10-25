@@ -4,11 +4,9 @@
   flex-direction: row;
   align-content: flex-start;
   flex-wrap: wrap;
-  flex: 1 1 auto
 }
 
 .tag {
-  flex: 1 1 auto;
   max-height: 1.5em;
   background-color: var(--color-accentA);
   max-width: fit-content;

@@ -4,6 +4,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortHeader } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 
+import Sort from '../../utils/Sort';
+
 import { env } from '../../components/environment/env'
 
 @Component({
@@ -55,29 +57,6 @@ export class ProjectsListComponent implements OnChanges {
     }
   }
 
-  sortByYearAscending(a: any, b: any): number {
-    const dateA: Number = a.year
-    const dateB: Number = b.year
-    return (dateA < dateB) ? -1 : 1
-  }
-
-  sortByYearDescending(a: any, b: any): number {
-    const dateA: Number = a.year
-    const dateB: Number = b.year
-    return (dateA < dateB) ? 1 : -1
-  }
-
-  sortByNameAscending(a: any, b: any): number {
-    const nameA: string = a.name
-    const nameB: string = b.name
-    return (nameA < nameB) ? -1 : 1
-  }
-
-  sortByNameDescending(a: any, b: any): number {
-    const nameA: string = a.name
-    const nameB: string = b.name
-    return (nameA < nameB) ? 1 : -1
-  }
 
   showDetails(project: any) {
     alert(project.details)
@@ -117,11 +96,11 @@ export class ProjectsListComponent implements OnChanges {
   }
 
   onNameClick(event: any): void {
-    this.displayedProjects.sort(this.sortByNameAscending)
+    this.displayedProjects.sort((a: any, b: any) => { return Sort.sortByStringAscending(a.name, b.name) })
   }
 
   onYearClick(event: any): void {
-    this.displayedProjects.sort(this.sortByYearAscending)
+    this.displayedProjects.sort((a: any, b: any) => { return Sort.sortByNumberAscending(a.year, b.year) })
   }
 
   onMinRangeInputChange(event: any): void {
