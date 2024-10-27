@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { WebsiteData } from '../../interfaces/WebsiteData';
-import { env } from '../environment/env';
+// import { env } from '../environment/env';
 
 import Sort from '../../utils/Sort';
 
@@ -23,7 +22,7 @@ import { LanguageContainerComponent } from './language-container/language-contai
   selector: 'app-home',
   standalone: true,
   imports: [
-    RouterLink, RouterLinkActive,
+    // RouterLink, RouterLinkActive,
     CommonModule,
 
     TagContainerComponent, SkillContainerComponent, EducationComponent, ProjectComponent, 
@@ -199,13 +198,13 @@ export class HomeComponent implements OnInit {
     // }
   }
 
-  async getData(): Promise<any> {
-    let data: any[] = []
-    try {
-       return await (await fetch(env.apiFullAdress + "/website-data")).json() as WebsiteData
-    } catch (e) {
-      console.error(e)
-    }
-  }
+  // async getData(): Promise<any> {
+  //   let data: any[] = []
+  //   try {
+  //      return await (await fetch(env.apiFullAdress + "/website-data")).json() as WebsiteData
+  //   } catch (e) {
+  //     console.error(e)
+  //   }
+  // }
 
 }
