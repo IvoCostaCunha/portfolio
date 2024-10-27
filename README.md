@@ -5,29 +5,69 @@ This frontend may in the future be connected to an [API](https://github.com/IvoC
 I use [Express](https://github.com/expressjs/express.git) as a server.
 
 # Requirements
-- [NodeJS](https://nodejs.org/en) (Tested with node@22.10.0)
+- [Git](https://git-scm.com/)
+- [NodeJS](https://nodejs.org/en) (Tested with node@23.1.0)
 - [Docker](https://www.docker.com/) (Tested with docker@27.2.0) (Optional)
 
 ## Installation
 
 The easier way to install this app is via docker and it also provides the most optimised installation since I only serve via express the minimum.
 
-I use the port 80 since it's the http port, so either make sure it's available on your end.
-Or change it in :
-- server.js (Express config)
-- Docker port forwarding (Replace 80:80 by 8080:80 for example)
+First git clone this repository.
+```sh
+git clone https://github.com/IvoCostaCunha/portfolio.git
+cd portfolio
+```
 
-### Docker
+### With Docker
 ```sh
 docker build -t me/portfolio:latest .
-docker docker run -p 80:80 me/portfolio:latest
+docker docker run -p -d 80:80 me/portfolio:latest
 ```
 
 ### Without Docker
 ```sh
 npm i
 npm run build
-node dist/browser
+node server.js
+# Ctrl-c to exit
+```
+The website should then be accessible at http://127.0.0.1:80.
+
+### Stop Docker Container
+```sh
+# Find the CONTAINER ID
+docker ps
+# Stop the process
+docker stop <CONTAINER ID>
 ```
 
-Either way the website will then be accessible at http://127.0.0.1:80.
+## In case of problems with ports
+
+You can check if ports are available with :
+
+### Linux & Mac
+```sh
+netstat -atnp TCP | grep "80"
+```
+
+### Windows
+```sh
+netstat -atnp TCP | find "80"
+```
+
+If these return a list, in the list there should **not** be any "*.80"
+If these return nothing all good.
+
+If port 80 isn't available check for port 8080 again in the same way, this one should be open.
+And then change express config and docker run command accordingly :
+- server.js (Express config)
+```javascript
+// ~ line 21
+const port = 8080;
+```
+- Docker port forwarding (Replace 80:80 by 8080:80)
+
+If 8080 isn't available then try 8081, 8082 and so on.
+
+The wesite in this case should be accessible at http://localhost:8080.
