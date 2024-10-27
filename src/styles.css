@@ -121,35 +121,6 @@ br {
     margin-bottom: 0.5em;
 }
 
-.container {
-    box-sizing: border-box; 
-    display: flex;
-    align-items: flex-start;
-
-    padding-left: 2.5em;
-    padding-right: 2.5em;
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
-
-    height: fit-content; 
-    min-height: 100%;
-
-    background-color: var(--color-background);
-
-    @media (orientation: portrait), (max-width: 1100px) {
-        flex-direction: column;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
-}
-
-.paragraphs {
-    line-height: 1.2em;
-    text-align: justify;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
 .vm {
     margin-top: 1em;
     margin-bottom: 1em;

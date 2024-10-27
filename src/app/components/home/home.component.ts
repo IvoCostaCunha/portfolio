@@ -5,9 +5,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { WebsiteData } from '../../interfaces/WebsiteData';
 import { env } from '../environment/env';
 
-import Redirections from '../../utils/Redirections';
-import Files from '../../utils/Files';
-import Mail from '../../utils/Mail';
 import Sort from '../../utils/Sort';
 
 import { TagContainerComponent } from '../tag-container/tag-container.component';
@@ -38,10 +35,6 @@ import { LanguageContainerComponent } from './language-container/language-contai
 })
 
 export class HomeComponent implements OnInit {
-
-  onClickDownload = (f: any) => {Files.onClickDownload(f)}
-  onClickRedirect = (l: any) => {Redirections.onClickRedirect(l)}
-  onClickSendMail = (d: any) => {Mail.sendMail(d)}
 
   websiteData: WebsiteData = {
     contact: {
@@ -102,7 +95,7 @@ export class HomeComponent implements OnInit {
         title: "portfolio-angular",
         year: "2023",
         tags: ["Angular", "Typescript", "Express", "Docker", "CSS"],
-        link: "https://ivocostacunha-portfolio.com",
+        link: "http://portfolio.ivocostacunha.com",
         githubLink: "https://github.com/IvoCostaCunha/portfolio.git",
         doc: "",
         imgs: ["assets/imgs/portfolio-app/portfolio-app.png"],
@@ -116,7 +109,7 @@ export class HomeComponent implements OnInit {
         githubLink: "https://github.com/IvoCostaCunha/stegano-image.git",
         doc: "",
         imgs: ["assets/imgs/stegano-image/stegano-image.png"],
-        description: "Website done with <a href='https://react.dev/'>React</a> and a <a href='https://www.python.org/'>Python</a> <a href='https://github.com/pallets/flask/'>Flask</a> API that together constitute an app that allow registered users to sign images in a png format using an implementation of the <a href='https://ieeexplore.ieee.org/document/9711628'>LSB steganographic method</a>. Right now the site is not deployed due to the cost since it uses multiple non free services. Stared as a student projet but now I'm looking to improve it significantely since I didn't had time implement all I would have liked. This project at the time even incomplete allowed me learn about cryptographic techniques, authentification and security in general."
+        description: "Website done with <a href='https://react.dev/'>React</a> and a <a href='https://www.python.org/'>Python</a> <a href='https://github.com/pallets/flask/'>Flask</a> API that together constitute an app that allow registered users to sign images in a png format using an implementation of the <a href='https://ieeexplore.ieee.org/document/9711628'>LSB steganographic method</a>. Right now the site is not deployed due to the cost since it uses multiple non free services. Started as a student projet but now I'm looking to improve it significantely since I didn't had time implement all I would have liked. This project at the time even incomplete allowed me learn about cryptographic techniques, authentification and security in general."
       },
       {
         title: "ter-wasabi",
@@ -124,7 +117,7 @@ export class HomeComponent implements OnInit {
         tags: ["Typescript", "Javascript", "D3.js", "Stencil", "Wasabi Song Corpus"],
         link: "",
         githubLink: "https://github.com/IvoCostaCunha/ter-grp12-2022.git",
-        doc: "assets/files/ter-wasabi.pdf",
+        doc: "assets/files/ter-wasabi/ter-wasabi.pdf",
         imgs: ["assets/imgs/ter-wasabi/ter-wasabi.png"],
         description: "A research project within the laboratory <a href='https://www.i3s.unice.fr/en/'>I3S</a> in Sophia-Antipolis whose objective was to graphically display the characteristics of data from the <a href='https://github.com/micbuffa/WasabiDataset'>Wasabi Song Corpus</a> using the <a href='https://getstencil.com/'>Stencil framework</a>, and <a href='https://d3js.org/'>D3.js</a> a graphical Javascript library. I worked mostly on data retrieval and parsing. The final objective was to the graph to be able to receive any data from the <a href='https://github.com/micbuffa/WasabiDataset'>Wasabi Song Corpus</a>."
       },
@@ -194,10 +187,9 @@ export class HomeComponent implements OnInit {
     ]
   }
 
-  async ngOnInit() {
+  ngOnInit() {
     this.websiteData.projects.sort((a: any, b: any) => { return Sort.sortByNumberDescending(a.year, b.year) })
     this.websiteData.certifications.sort((a: any, b: any) => {return Sort.sortByStringDescending(a.year, b.year) })
-    console.log(this.websiteData.projects)
     // try {
     //   let data = (await this.getData())
     //   console.log(data)

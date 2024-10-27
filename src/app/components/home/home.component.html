@@ -1,3 +1,4 @@
+<a id="about-me"></a>
 <div class="container">
   <div class="left-container">
     <app-menu></app-menu>
@@ -5,9 +6,6 @@
   </div>
   <div class="right-container">
     <app-about-me [aboutMeHTML]="websiteData.aboutMeHTML" [workMethodsHTML]="websiteData.workMethodsHTML" [mePhotoPath]="websiteData.mePhotoPath"></app-about-me>
-
-    <h1>Beliefs</h1>
-    <div class="paragraphs" [innerHTML]="websiteData.beliefsHTML"></div>
 
     <h1>Me as freelance</h1>
     <div [innerHTML]="websiteData.freelanceHTML" class="paragraphs"></div>
@@ -21,6 +19,9 @@
     <div class="project-container">
         <app-project *ngFor="let p of websiteData.projects" [project]="p"></app-project>
     </div>
+
+    <h1>Beliefs</h1>
+    <div class="paragraphs" [innerHTML]="websiteData.beliefsHTML"></div>
 
     <a id="education"></a>
     <app-education [eduIntroHTML]="websiteData.eduIntroHTML" [eduPhotoPath]="websiteData.eduPhotoPath" [certifications]="websiteData.certifications"></app-education>

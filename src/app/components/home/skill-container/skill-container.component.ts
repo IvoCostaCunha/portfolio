@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Skill } from '../../../interfaces/Skill';
@@ -12,15 +12,27 @@ import { Skill } from '../../../interfaces/Skill';
   templateUrl: './skill-container.component.html',
   styleUrl: './skill-container.component.css'
 })
-export class SkillContainerComponent {
+export class SkillContainerComponent implements OnInit {
   @Input() skills: Skill[] = []
+  colorAccentA: string = ""
+  colorAccentB: string = ""
+
+  mediaQuery: any = window.matchMedia("(prefers-color-scheme: light)")
+
+  ngOnInit() {
+    console.log(this.mediaQuery)
+    this.colorAccentA = getComputedStyle(document.body).getPropertyValue("--color-accentA")
+    this.colorAccentB = getComputedStyle(document.body).getPropertyValue("--color-accentC")
+    this.mediaQuery.addEventListener("change", (e: Event) => {
+      this.colorAccentA = getComputedStyle(document.body).getPropertyValue("--color-accentA")
+      this.colorAccentB = getComputedStyle(document.body).getPropertyValue("--color-accentC")
+    })
+  }
 
   getGradient(percent: number): string {
-    let colorAccentA: string = getComputedStyle(document.body).getPropertyValue("--color-accentA")
-    let colorAccentB: string = getComputedStyle(document.body).getPropertyValue("--color-accentC")
-    let backgroundGradient: string = `background: linear-gradient(90deg, ${colorAccentA} ${percent}%, ${colorAccentB} ${100-percent}%);`
+    let backgroundGradient: string = `background: linear-gradient(90deg, ${this.colorAccentA} ${percent}%, ${this.colorAccentB} ${100-percent}%);`
     if(percent < 50) {
-      backgroundGradient = `background: linear-gradient(to left, ${colorAccentA} ${100-percent}%, ${colorAccentB} ${percent}%);`
+      backgroundGradient = `background: linear-gradient(to left, ${this.colorAccentA} ${100-percent}%, ${this.colorAccentB} ${percent}%);`
     }
     return  backgroundGradient;
   }
