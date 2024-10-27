@@ -56,10 +56,12 @@ netstat -atnp TCP | grep "80"
 netstat -atnp TCP | find "80"
 ```
 
-If these return a list, in the list there should **not** be any "*.80"
+If these return a list, in the list there should **not** be any "*.80".
+
 If these return nothing all good.
 
 If port 80 isn't available check for port 8080 again in the same way, this one should be open.
+
 And then change express config and docker run command accordingly :
 - server.js (Express config)
 ```javascript
@@ -70,4 +72,4 @@ const port = 8080;
 
 If 8080 isn't available then try 8081, 8082 and so on.
 
-The wesite in this case should be accessible at http://localhost:8080.
+The wesite in this case should be accessible at http://localhost:8080 or remplace 8080 by the post that is open to you.
