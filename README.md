@@ -13,7 +13,7 @@ I use [Express](https://github.com/expressjs/express.git) as a server.
 
 The easier way to install this app is via docker and it also provides the most optimised installation since I only serve via express the minimum.
 
-First git clone this repository.
+First clone this repository.
 ```sh
 git clone https://github.com/IvoCostaCunha/portfolio.git
 cd portfolio
@@ -22,7 +22,7 @@ cd portfolio
 ### With Docker
 ```sh
 docker build -t me/portfolio:latest .
-docker docker run -p -d 80:80 me/portfolio:latest
+docker run -p -d 80:80 me/portfolio:latest
 ```
 
 ### Without Docker
