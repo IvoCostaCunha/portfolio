@@ -10,10 +10,8 @@ export interface WebsiteData {
   workMethodsHTML: string
   mePhotoPath: string
   beliefsHTML: string
-  freelanceHTML: string
   languages: Language[]
   skills: Skill[]
-  projectsIntroHTML: string
   projects: Project[]
   eduIntroHTML: string
   eduPhotoPath: string

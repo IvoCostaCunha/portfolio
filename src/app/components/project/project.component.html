@@ -7,16 +7,16 @@
   <span [innerHTML]="project.description"></span>
 
   <div class="project-mid">
-    <img class="project-img" tabindex="0" 
+    <img class="project-img" tabindex="0"
     [alt]="project.title + '-illustation'"
-    loading="lazy" [src]="project.imgs[0]" 
+    loading="lazy" [src]="project.imgs[0]"
     (click)="onClickDownload(project.imgs[0])"/>
     <app-tag-container [tags]="project.tags"></app-tag-container>
   </div>
   <div class="project-bottom">
     <button class="project-links" (click)="onClickRedirect(project.githubLink)"
     *ngIf="project.githubLink !== '' ">
-      <i class="bi bi-github"></i> Github
+      <i class="bi bi-github"></i> GitHub
     </button>
     <button class="project-links" (click)="onClickRedirect(project.link)"
     *ngIf="project.link !== '' ">

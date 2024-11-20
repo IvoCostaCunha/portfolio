@@ -7,12 +7,9 @@
   <span><i class="bi bi-phone-fill"></i> &nbsp;{{contact.tel}}</span><br>
   <span><i class="bi bi-envelope-at-fill"></i> &nbsp;<a (click)="onClickSendMail(contact.mail)">{{contact.mail}}</a></span>
   <div class="socials-container">
-    <button class="social" (click)="onClickSendMail(contact.mail)">
-      <i class="bi bi-envelope-at-fill"></i> 
-    </button>
     <button class="social" (click)="onClickRedirect(contact.github)">
       <i class="bi bi-github"></i>
-      Github
+      GitHub
     </button>
     <button class="social" (click)="onClickRedirect(contact.linkedIn)">
       <i class="bi bi-linkedin"></i>

@@ -25,7 +25,7 @@ import { LanguageContainerComponent } from './language-container/language-contai
     // RouterLink, RouterLinkActive,
     CommonModule,
 
-    TagContainerComponent, SkillContainerComponent, EducationComponent, ProjectComponent, 
+    TagContainerComponent, SkillContainerComponent, EducationComponent, ProjectComponent,
     LanguageContainerComponent, MenuComponent, FooterComponent, ContactComponent,
     AboutMeComponent
   ],
@@ -41,36 +41,32 @@ export class HomeComponent implements OnInit {
       mail: "ivo.costacunha@icloud.com",
       github: "https://github.com/IvoCostaCunha",
       linkedIn: "https://www.linkedin.com/in/ivo-costa-cunha/"
-    },    
+    },
     mePhotoPath: "assets/imgs/site/me/me.jpeg",
     aboutMeHTML: `
-    Hello, my name is <b>Ivo Costa Cunha</b>.<br>
-    I'm a developper by trade, currently looking for opportunities, in a company or as a freelance.<br>
-    I'm curious specially about computer technologies, even more specially if those are in a domain I'm interrested in.<br>
-    I like to talk to people about computer technologies that they use daily without knowing, and how these technologies impact them. I think as big as current internet is now more people should know about its inner workings in simple terms.<br>
-    I have a tendency to change personal projects focus often as I tend to lose creativity in those if they become too much of a routine.<br>
-    However paradoxically I can be sometimes too much into perfection, taking way too much to release something. Sometimes overdesigning implementations way too early when I should be trying to reach simple objectives first.<br>
-    Anyway despite these I appreciate when my implementations function as planned and I think it's one of the best things I can feel as a developper.`,
+      Hello, my name is Ivo Costa Cunha and I work as developer. I am currently looking for opportunities as a freelance or in a company.<br>
+      I am fond of <a href="https://archive.org/details/foundationsofcryptographyaprimerodedgoldreich/page/n1/mode/2up">cryptographic</a> technologies and techniques nowadays since I am trying to improve my abilities in creating <a href="https://developer.mozilla.org/en-US/docs/Web/Security">secure</a> websites. I like to inform people about these same technologies. As internet still grow wider I think that by transferring what I know about the subject I may sensibilise people to it and its implications, security and privacy wise.<br>
+      I appreciate to learn and experience new things so I like to change subjects on my personal projects in way to not work on the same type of project twice in a row. That gives me a way to extend my knowledge.<br>
+      Therefore I'm also currently learning to play guitar despite the difficulties. I like it since in a way music is just like programming languages, it is a code defining sounds.<br>
+      Overall what I enjoy the most is the feeling of an accomplishment, independent of the domain.
+    `,
     workMethodsHTML: `
-    When alone or with a team that allows it, I can be quite chaotic, it allows me to explore differents ways of doing things even if it isn't always worth it. By doing I can learn new things, and I think it makes projects more interresting, in opposition to a professional environment where tasks are already planned.<br>
-    Evidently as a freelance, if I get the chance to have some clients, I would always put on the table tested solutions, that could have been tested because I explored these in my chaotic projects. In the end the two approaches compliment each other.<br
-    As you can deduce from what I previously said I don't do Wordpress or equivalent. All my projects are tailor-made to my specific, or your specific needs, or desires.<br>
-    I tend to prefer basic, functionnal UIs that are easy to use and provide functionality above over stylised UIs. Now that doesn't mean I don't like color, or animations but you will probably never see an ultra flashy 3d web site from me except maybe as an experiment that isn't supposed to be very functionnal.<br>
-    Also, as I said, I'm curretly looking for opportunities, I am proposing showcase websites, "sites vitrines" in french, without backend. But with more branding than this one.<br> 
-    I <i>can</i> do backend but with backend I will take longer and so if I'm to work on a time frame I would prefer simpler websites, at least for now until I can accurately predict time estimations for tasks.<br>
-    So if you think I could do some work for you do not hesitate to contact me ! See more details in the freelance section further down.`,
-    beliefsHTML: `I support <a href='https://opensource.org/'>opensource software</a> since I think it improves both the experience of the code owner and others. The owner gets to be exposed to different percepectives and the others get to learn on how to do x or y. In the end everyone wins and improves.<br>
-    Security wise, security through obscurity is opposed to Kerckhoffs' principle which just assumes that <i> "the enemy knows the system" </i> - Claude Shannon. If cryptographers believe in a white-box approach so should I.<br>
-    I try to publish my code as opensource, through a <a href='https://opensource.org/license/MIT'>MIT</a>, or <a href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GPL</a> licence to allow others to consult it, and maybe give me some feedback or suggestions.<br>
-    I also support a web free of systematic surveillance, because the end doesn't justify the means. Even privacy invasion swept aside, if to catch one the lives of a hundred thousands must exposed to random people at a random agency then it isn't not worth it.`,
-    freelanceHTML:  `As a freelance I would prefer to work with clarity in mind.<br>
-    To do so I would like to have clear projects goals from the begin, and client feedback from time to time.<br>
-    During a project I would prefer to work in a <a href='https://en.wikipedia.org/wiki/Agile_software_development'>Agile</a> mindset. I would send a report every week containing what I did and what I will do next week with a deliverable if possible. Doing so the client can test the deliverable and send feedback if they think I'm going in a wrong direction.<br>
-    Once all functionalities are in I can also procure the <a href='https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name'>domain</a> and <a href='https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website'>deploy the website</a>, if negociated before, in a <a href='https://en.wikipedia.org/wiki/Virtual_private_server'>VPS</a> chosen by the client.
-    In any case I will do a live demo to the client before finishing the contract to make sure all functionalities are in.<br>
-    If some anomaly shows up later I will also fix it if it's in the functionalities decided at the begining of the project.<br>
-    I hope my methods are in accord with you, but they can be arranged depending on the client, sometimes people just want to see the final product, I can in this case not contact the person unless it's really important. I'm open to differents ways of managing the project on my end.<br>
-    You can check my projects below to see if you like my work. For now not much websites I admit, but I'm working on it.`,
+      I have two work methodologies, one applies to when I work alone in a personal project, the other when I am a member of a team or as a professional.<br>
+      In a team I focus on communication and reliability. For that if needed I will always propose some basic utilities of project management. In a small team I think a <a href="https://kanbanguides.org/wp-content/uploads/2021/01/Kanban-Guide-2020-12.pdf">Kanban</a> board, a global communication channel and finally a shared <a href="https://git-scm.com/">code repository</a> are a must have.<br>
+      For large teams I have during my Master learned about the Agile Methods like <a href="https://www.scrum.org/resources/scrum-guide">SCRUM</a> or <a href="https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf">Spotify</a> but also the non Agile Methods like <a href="https://en.wikipedia.org/wiki/V-model_(software_development)">V</a> and W (double V) cycles.<br>
+      Alone in a personal project I reduce the project management to a minimum, but I still produce documentation even if only for myself. If the project grows with a lot of features I may use a Kanban board for myself to not lose feature focus if needed.<br>
+      I still prefer to keep my personal projects small because it allows me to do multiple different projects instead of a large one.<br>
+      When I work alone but as a professional or freelance I follow the same principles as a small team, but the communication channel will only be between me and the client.<br>
+      As said before I looking for opportunities as a freelance, so if you think I can code something for you do no hesitate to contact me.<br>
+      You can check the projects section bellow to see my previous works.
+    `,
+    beliefsHTML: `
+      I support the Open Source licensing model.
+      Code licensed as <a href="https://opensource.org/">Open Source</a> is typically publicly accessible, modifiable and redistributable depending on the licence conditions. Popular licences are <a href="https://opensource.org/license/MIT">MIT Licence</a>, <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU Licence</a>, <a href="https://opensource.org/license/BSD-3-clause">BSD Licence</a> and <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache2 Licence</a>. Those Licences in general allow to consult, modify and redistribute the code but on different conditions, for example GNU Licence forces the code englobing the licensed GNU code to also be licensed with a GNU Licence. The MIT Licence is less restrictive, since the licensed code can be englobed into a Copyrighted Closed Source code, so each licence have its use case.<br>
+      The most important to me is that the source code can be read. I believe that source code should be open to anyone using the product which is the said code compiled. It can then be trusted if the person using the product is able to understand the source code, or at least have anyone willing to verify it for him or her.<br>
+      Finally if the code is open then it's also shared publicly and I think in cases of smaller projects or projects with good documentation a lot can be learned from them.<br>
+      Since it's also redistributable a competent person can modify the Open Source code to adapt it to her or his needs, a good example being the <a href="https://www.vim.org/">Vim</a> command line text editor and its other version in <a href="https://www.lua.org/">Lua</a> <a href="https://neovim.io/">Neovim</a>.
+    `,
     languages: [
       {name: "Portuguese", level: "Native (C2)"},
       {name: "French", level: "Native (C2)"},
@@ -81,99 +77,95 @@ export class HomeComponent implements OnInit {
       {name: "CSS", rating: 60},
       {name: "Javascript", rating: 70},
       {name: "Typescript", rating: 65},
+      {name: "Lua", rating: 70},
+      {name: "Python", rating: 70},
+      {name: "C", rating: 70},
+      {name: "C++", rating: 25},
+      {name: "C#", rating: 50},
+      {name: "Java", rating: 50},
+      {name: "SQL", rating: 50},
+      {name: "Bash", rating: 20},
       {name: "Angular", rating: 80},
       {name: "React", rating: 70},
-      {name: "Java", rating: 50},
-      {name: "C++", rating: 50},
-      {name: "C", rating: 50},
-      {name: "Bash", rating: 20},
+      {name: "Docker", rating: 30},
+      {name: "PHP", rating: 50}
     ],
-    projectsIntroHTML: `These are the projects I'd like to highlight.`,
     projects: [
-      {
-        title: "portfolio-angular",
-        year: "2023",
-        tags: ["Angular", "Typescript", "Express", "Docker", "CSS"],
-        link: "http://portfolio.ivocostacunha.com",
-        githubLink: "https://github.com/IvoCostaCunha/portfolio.git",
-        doc: "",
-        imgs: ["assets/imgs/portfolio-app/portfolio-app.png"],
-        description: "My personal portfolio to present myself and my projects. This website in fact. For now just a static website without any API or backend but I'm looking for improving it in a close future. It uses the <a href='https://angular.dev/'>Angular</a> framework, and a bunch of <a href='https://developer.mozilla.org/en-US/docs/Web/CSS'>CSS</a>, since at the start I had bigger ambitions for it. I'm planning to in the future build an <a href='https://github.com/IvoCostaCunha/portfolio-api.git'>API</a> that would allow me to edit content without the need to redeploy the entire website."
-      },
-      {
-        title: "stegano-image",
-        year: "2022",
-        tags: ["Python", "React", "Flask", "REST API", "Steganography", "Amazon S3", "PostgreSQL"],
-        link: "",
-        githubLink: "https://github.com/IvoCostaCunha/stegano-image.git",
-        doc: "",
-        imgs: ["assets/imgs/stegano-image/stegano-image.png"],
-        description: "Website done with <a href='https://react.dev/'>React</a> and a <a href='https://www.python.org/'>Python</a> <a href='https://github.com/pallets/flask/'>Flask</a> API that together constitute an app that allow registered users to sign images in a png format using an implementation of the <a href='https://ieeexplore.ieee.org/document/9711628'>LSB steganographic method</a>. Right now the site is not deployed due to the cost since it uses multiple non free services. Started as a student projet but now I'm looking to improve it significantely since I didn't had time implement all I would have liked. This project at the time even incomplete allowed me learn about cryptographic techniques, authentification and security in general."
-      },
       {
         title: "ter-wasabi",
         year: "2021",
-        tags: ["Typescript", "Javascript", "D3.js", "Stencil", "Wasabi Song Corpus"],
+        tags: ["Typescript", "Javascript", "D3.js", "Stencil", "Wasabi Song Corpus", "Semantic Web", "Web 3.0"],
         link: "",
         githubLink: "https://github.com/IvoCostaCunha/ter-grp12-2022.git",
         doc: "assets/files/ter-wasabi/ter-wasabi.pdf",
         imgs: ["assets/imgs/ter-wasabi/ter-wasabi.png"],
-        description: "A research project within the laboratory <a href='https://www.i3s.unice.fr/en/'>I3S</a> in Sophia-Antipolis whose objective was to graphically display the characteristics of data from the <a href='https://github.com/micbuffa/WasabiDataset'>Wasabi Song Corpus</a> using the <a href='https://getstencil.com/'>Stencil framework</a>, and <a href='https://d3js.org/'>D3.js</a> a graphical Javascript library. I worked mostly on data retrieval and parsing. The final objective was to the graph to be able to receive any data from the <a href='https://github.com/micbuffa/WasabiDataset'>Wasabi Song Corpus</a>."
+        description: `
+          A research project within the laboratory <a href="https://www.i3s.unice.fr/en/">I3S</a> in Sophia-Antipolis whose objective was to graphically display with <a href="https://d3js.org/">D3.js</a>, a Javascript library, the characteristics of data retrieved and parsed from the <a href="https://github.com/micbuffa/WasabiDataset">Wasabi Song Corpus</a> using the <a href="https://getstencil.com/">Stencil</a> framework. I worked mostly on data retrieval and parsing. The final objective was for the graph to be able to receive any data from the <a href="https://github.com/micbuffa/WasabiDataset">Wasabi Song Corpus</a> and catalog the relevant characteristics of said data. This project is also uses concepts of <a href="https://en.wikipedia.org/wiki/Semantic_Web">Semantic Web</a> research also called Web 3.0 whose objective is to have the all the Web readable by machines.
+        `
       },
+      {
+        title: "stegano-image",
+        year: "2022",
+        tags: ["Python", "React", "Flask", "REST API", "Steganography", "Cryptography", "Amazon S3", "PostgreSQL"],
+        link: "",
+        githubLink: "https://github.com/IvoCostaCunha/stegano-image.git",
+        doc: "assets/files/stegano-image/stegano-image.pdf",
+        imgs: ["assets/imgs/stegano-image/stegano-image.png"],
+        description: `
+          Website done with <a href="https://react.dev/">React</a> and a <a href="https://www.python.org/">Python</a> <a href="https://flask.palletsprojects.com/en/stable/">Flask</a> API that together constitute an app that allow registered users to sign images in a png format using an implementation of the <a href="https://www.researchgate.net/publication/330565811_Hiding_data_in_images_using_DCT_steganography_techniques_with_compression_algorithms">LSB</a> (Least Significant Bit) <a href="https://en.wikipedia.org/wiki/Steganography">steganographic</a> method. Right now the site is not deployed due to the cost since it uses multiple non free services. Started as a student projet but now I'm looking to improve it meaningfully since I didn't had time implement all I would have liked. This project at the time even incomplete allowed me learn about cryptographic techniques, authentification and security in general.
+        `
+
+      },
+
       {
         title: "audio-player",
         year: "2022",
-        tags: ["Pure Web Component", "Javascript", "WebAudio", "CSS"],
+        tags: ["Pure Web Component", "Javascript", "WebAudio"],
         link: "",
         githubLink: "https://github.com/IvoCostaCunha/audio-player.git",
         doc: "",
         imgs: ["assets/imgs/audio-player/audio-player.png"],
-        description: "Audio-player project that allows to play music in the web with <a href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API'>Web Audio API</a>, and modify the stream of music using different parameters. A simple project but coded in pure Javascript and with it I could learn about <a href='https://developer.mozilla.org/en-US/docs/Web/API/Web_components'>Web Components</a> and the <a href='https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM'>shadow DOM</a> which leads to <a href='https://angular.dev/'>Angular</a> and <a href='https://react.dev/' >React</a>."
+        description: `
+          Audio-player project that allows to play music in the web using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, and modify the stream of music using frequency, speed and stereo parameters. A simple project but coded in pure Javascript and with it I could learn about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">Web Components</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">shadow DOM</a>, techniques which <a href="https://react.dev/">React</a> and <a href="https://angular.dev/">Angular</a> rely upon heavily.
+        `
       },
-      // {
-      //   title: "sdl2-game",
-      //   year: "2022",
-      //   tags: ["C++", "SDL2", "2D", "Rendering"],
-      //   link: "",
-      //   githubLink: "https://github.com/IvoCostaCunha/sdl2-game.git",
-      //   doc: "",
-      //   imgs: ["assets/imgs/sdl2-game/sdl2-game.jpg"],
-      //   description: "Experimentation about rendering things with sdl2."
-      // },
-      // {
-      //   title: "raylib-game",
-      //   year: "2022",
-      //   tags: ["C", "raylib", "2D", "Rendering"],
-      //   link: "",
-      //   githubLink: "https://github.com/IvoCostaCunha/raylib-game.git",
-      //   doc: "",
-      //   imgs: ["assets/imgs/raylib-game/raylib-game.png"],
-      //   description: "Experimentation about rendering things with raylib."
-      // }
+      {
+        title: "portfolio",
+        year: "2023",
+        tags: ["Angular", "Typescript", "Express", "Docker"],
+        link:"https://portfolio.ivocostacunha.com",
+        githubLink: "https://github.com/IvoCostaCunha/portfolio.git",
+        doc: "",
+        imgs: ["assets/imgs/portfolio-app/portfolio-app.png"],
+        description: `
+          My personal portfolio to present myself and my projects. For now just a static website without any API or backend but I'm looking for improving it in a near future. It uses the <a href="https://angular.dev/">Angular</a> framework. I'm planning in the future to build an API that would allow me to edit content without the need to redeploy the entire website.
+        `
+      },
     ],
-    eduIntroHTML: `I did all my education in Nice, a city in the south of France, uninhabitable during summer.<br>
-    After my scientific "Baccalauréat" I did a professional diploma, a BTS in France, that allowed me to learn about <a href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming'>OOP</a> (Object Oriented Paradigm) with <a href='https://dotnet.microsoft.com/en-us/'>C#</a> at the time.<br>
-    I absolutely loved the freedom a developper had in creation, I understood experience was needed with the different technologies and languages, but I also saw that with some creativity the possibilities were endless.<br>
-    So, I followed with a <a href='https://univ-cotedazur.fr/miage'>MIAGE Licence</a> that mixed software development with company management, to open myself to more corporate opportunities, and after that I managed to obtain a <a href='https://univ-cotedazur.fr/formation/offre-de-formation/master-methodes-informatiques-appliquees-a-la-gestion-des-entreprises'>Master MIAGE</a> option INTENSE.<br> 
-    The master was mostly the continuation of the previous licence but with projects that combined the knowledge I had obtained previously and new notions.`,
+    eduIntroHTML: `
+      I did all my education in Nice, a touristic city in the south of France.<br>
+      After obtaining a high school baccalaureate , biology speciality, i followed up with an <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers">Advanced Technician Diploma specialised in Software Development</a> in which I learned about <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming">OOP</a> (Object Oriented Paradigm) in <a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a> at the the time.<br>
+      I absolutely loved the freedom a developper had in creation, while understanding that experience or at least theoretical knowledge was needed to fully explore that freedom. So I followed up once again with a <a href="https://www.miage.fr/reseau-miage-france/">MIAGE</a> Bachelor Degree (acronym of Computer Methods Applied to Company Management) that fused together software development and company management in order to open myself for eventual business management positions.<br>
+      Later on I completed a <a href="https://univ-cotedazur.fr/formation/offre-de-formation/master-methodes-informatiques-appliquees-a-la-gestion-des-entreprises-miage-parcours-numerique-responsable-numres">MIAGE Master speciality INTENSE</a> (acronym of Innovation and Digital Transformation of an Organisation) that was the capstone of my education for now at least.
+    `,
     eduPhotoPath: "assets/imgs/site/nice/nice.jpg",
     certifications: [
       {
         title: "BTS SIO",
-        year: "2018",
-        description: "Professional diploma from the Lycée Estienne d'Orves (Nice, France).",
+        year: "2016-2018",
+        description: "Advanced Technician Diploma from the Lycée Estienne d'Orves (Nice, France).",
         filePath: ""
       },
       {
-        title: "Licence MIAGE",
-        year: "2020",
-        description: "Licence MIAGE from the Université Côte d'Azur (Nice, France).",
+        title: "MIAGE Bachelor Degree",
+        year: "2018-2020",
+        description: "Bachelor Degree from the Université Côte d'Azur (Nice, France).",
         filePath: ""
       },
       {
         title: "Master MIAGE",
-        year: "2023",
-        description: "Master MIAGE option INTENSE from the Université Côte d'Azur (Nice, France).",
+        year: "2020-2023",
+        description: "Master MIAGE INTENSE from the Université Côte d'Azur (Nice, France).",
         filePath: ""
       },
       {
@@ -187,12 +179,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.websiteData.projects.sort((a: any, b: any) => { return Sort.sortByNumberDescending(a.year, b.year) })
     this.websiteData.certifications.sort((a: any, b: any) => {return Sort.sortByStringDescending(a.year, b.year) })
     // try {
     //   let data = (await this.getData())
     //   console.log(data)
-    //   this.websiteData = data 
+    //   this.websiteData = data
     // } catch(error) {
     //   console.error(error)
     // }

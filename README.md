@@ -1,22 +1,25 @@
-# Portfolio-app
-This Angular app is my current portfolio frontend. It's not finished, a lot still needs to be done, it's more like a base for future updates, if I don't decide to rewrite it in React.
-This frontend may in the future be connected to an [API](https://github.com/IvoCostaCunha/portfolio-api.git) but for now I'm trying to get this part right.
+# Portfolio
+This Angular app is my current portfolio frontend. It is not finished, a lot still needs to be done, it is a base for future updates.
+This frontend may in the future be connected to an [API](https://github.com/IvoCostaCunha/portfolio-api.git) but for now I am trying to get the static part operational and looking good.
+
+*(I might in the future rewrite the app with React instead since I find that Angular generates too much files.)*
 
 I use [Express](https://github.com/expressjs/express.git) as a server.
 
 # Requirements
-- [Git](https://git-scm.com/)
-- [NodeJS](https://nodejs.org/en) (Tested with node@23.1.0)
-- [Docker](https://www.docker.com/) (Tested with docker@27.2.0) (Optional)
+- [NodeJS](https://nodejs.org/en) (Tested with Node@23.1.0)
+- [Docker](https://www.docker.com/) (Tested with Docker@27.2.0) (Optional)
 
 ## Installation
 
-The easier way to install this app is via docker and it also provides the most optimised installation since I only serve via express the minimum.
+I would suggest to do the installation via Docker, I think it is the easiest way since the installation is multi-platform and not subjected to platform specific problems. However, the installation can also be done by NPM and the app run by Node.
 
-First clone this repository.
+### With Node
 ```sh
-git clone https://github.com/IvoCostaCunha/portfolio.git
-cd portfolio
+npm i
+npm run build
+node server.js
+# Ctrl-c to exit
 ```
 
 ### With Docker
@@ -24,15 +27,6 @@ cd portfolio
 docker build -t me/portfolio:latest .
 docker run -p -d 80:80 me/portfolio:latest
 ```
-
-### Without Docker
-```sh
-npm i
-npm run build
-node server.js
-# Ctrl-c to exit
-```
-The website should then be accessible at http://127.0.0.1:80.
 
 ### Stop Docker Container
 ```sh
@@ -42,34 +36,34 @@ docker ps
 docker stop <CONTAINER ID>
 ```
 
-## In case of problems with ports
+The website should then be accessible at http://127.0.0.1:80 or http://locahost:80.
 
-You can check if ports are available with :
+## If port 80 is unavailable
+
+If the port 80 is unavailable the open ports can be tested individually with the netstat CLI utility available on Mac, Linux and Windows and a pattern matching command. Commands bellow should return a list of ports currently on use filtered by the pattern matching command.
 
 ### Linux & Mac
 ```sh
-netstat -atnp TCP | grep "80"
+netstat -atnp TCP | grep "<port>"
 ```
 
 ### Windows
 ```sh
-netstat -atnp TCP | find "80"
+netstat -atnp TCP | FINDSTR "<port>"
 ```
 
-If these return a list, in the list there should **not** be any "*.80".
+I suggest testing port 8080 since usually unused.
 
-If these return nothing all good.
+Then the express config and docker run command have to be modified accordingly :
 
-If port 80 isn't available check for port 8080 again in the same way, this one should be open.
-
-And then change express config and docker run command accordingly :
-- server.js (Express config)
+**server.js (Express config)**
 ```javascript
 // ~ line 21
-const port = 8080;
+const port = <port>;
 ```
-- Docker port forwarding (Replace 80:80 by 8080:80)
 
-If 8080 isn't available then try 8081, 8082 and so on.
+**Docker port forwarding (Replace 80:80 by <port>:80)**
 
-The wesite in this case should be accessible at http://localhost:8080 or remplace 8080 by the post that is open to you.
+If 8080 isn't available 8081, 8082 and so on can be tried.
+
+The website in this case should be accessible at http://localhost:<port> or http://127.0.0.1:<port>

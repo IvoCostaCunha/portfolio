@@ -7,15 +7,11 @@
   <div class="right-container">
     <app-about-me [aboutMeHTML]="websiteData.aboutMeHTML" [workMethodsHTML]="websiteData.workMethodsHTML" [mePhotoPath]="websiteData.mePhotoPath"></app-about-me>
 
-    <h1>Me as freelance</h1>
-    <div [innerHTML]="websiteData.freelanceHTML" class="paragraphs"></div>
-
     <app-language-container [languages]="websiteData.languages"></app-language-container>
 
     <a id="projects"></a>
     <app-skill-container [skills]="websiteData.skills"></app-skill-container>
     <h1>Projects</h1>
-    <div class="paragraphs" [innerHTML]="websiteData.projectsIntroHTML"> </div>
     <div class="project-container">
         <app-project *ngFor="let p of websiteData.projects" [project]="p"></app-project>
     </div>
