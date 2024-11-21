@@ -25,7 +25,7 @@ node server.js
 ### With Docker
 ```sh
 docker build -t me/portfolio:latest .
-docker run -d -p 80:80 me/portfolio:latest
+docker run -d -u 1050 -p 80:80 me/portfolio:latest
 ```
 
 ### Stop Docker Container
