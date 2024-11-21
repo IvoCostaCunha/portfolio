@@ -16,7 +16,7 @@ I would suggest to do the installation via Docker, I think it is the easiest way
 
 ### With Node
 ```sh
-npm i
+npm install
 npm run build
 node server.js
 # Ctrl-c to exit
@@ -25,7 +25,7 @@ node server.js
 ### With Docker
 ```sh
 docker build -t me/portfolio:latest .
-docker run -d -u 1050 -p 80:80 me/portfolio:latest
+docker run -d -p 80:80 me/portfolio:latest
 ```
 
 ### Stop Docker Container
