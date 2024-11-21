@@ -12,7 +12,7 @@ I use [Express](https://github.com/expressjs/express.git) as a server.
 
 ## Installation
 
-I would suggest to do the installation via Docker, I think it is the easiest way since the installation is multi-platform and not subjected to platform specific problems. However, the installation can also be done by NPM and the app run by Node.
+I would suggest to do the installation via Docker, I think it is the easiest way since the installation isn't platform dependent. However, the installation can also be done by NPM and the app run by Node.
 
 ### With Node
 ```sh
@@ -25,7 +25,7 @@ node server.js
 ### With Docker
 ```sh
 docker build -t me/portfolio:latest .
-docker run -p -d 80:80 me/portfolio:latest
+docker run -d -p 80:80 me/portfolio:latest
 ```
 
 ### Stop Docker Container
@@ -62,8 +62,8 @@ Then the express config and docker run command have to be modified accordingly :
 const port = <port>;
 ```
 
-**Docker port forwarding (Replace 80:80 by <port>:80)**
+**Docker port forwarding** Replace 80:80 by `<port>`:80)
 
 If 8080 isn't available 8081, 8082 and so on can be tried.
 
-The website in this case should be accessible at http://localhost:<port> or http://127.0.0.1:<port>
+The website in this case should be accessible at http://localhost:`<port>` or http://127.0.0.1:`<port>`.
