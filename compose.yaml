@@ -1,0 +1,16 @@
+services:
+  no-ssl:
+    image: me/portfolio_nossl
+    pull_policy: never
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+  ssl:
+    image: me/portfolio_ssl
+    pull_policy: never
+    build:
+      dockerfile: Dockerfile-SSL
+    ports:
+      - "443:443"

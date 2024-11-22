@@ -22,7 +22,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: #243D42; 
+        --color-background: #243D42;
         --color-containerA: #243D42;
         --color-containerB: #243D42;
         --color-subcontainer-background: #393D5A;
@@ -36,7 +36,7 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --color-background: #F2F2F2;; 
+        --color-background: #F2F2F2;;
         --color-containerA: #F2F2F2;
         --color-containerB: #F2F2F2;
         --color-subcontainer-background: #D9D9D9;
@@ -48,14 +48,14 @@
     }
 }
 
-html, body { 
+html, body {
     margin: 0;
     height: 100%
 }
 
 body {
-     font-family: "agenorneue-regular"; 
-     font-size: medium; 
+     font-family: "agenorneue-regular";
+     font-size: medium;
      color: var(--color-font);
 }
 
@@ -129,4 +129,9 @@ br {
 .hvm {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+}
+
+.paragraphs {
+    line-height: 1.2em;
+    text-align: justify;
 }

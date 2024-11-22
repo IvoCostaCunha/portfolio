@@ -1,5 +1,5 @@
 .container {
-    box-sizing: border-box; 
+    box-sizing: border-box;
     display: flex;
     align-items: flex-start;
 
@@ -8,7 +8,7 @@
     padding-top: 2.5em;
     padding-bottom: 2.5em;
 
-    height: fit-content; 
+    height: fit-content;
     min-height: 100%;
 
     background-color: var(--color-background);
@@ -36,7 +36,7 @@
     @media (orientation: portrait), (max-width: 1000px) {
         width: 100%;
         margin-bottom: 1%;
-    }  
+    }
 }
 
 .right-container {
@@ -49,11 +49,6 @@
     padding: 1.5em;
     background-color: var(--color-containerB);
     gap: 1em;
-}
-
-.paragraphs {
-    line-height: 1.2em;
-    text-align: justify;
 }
 
 .project-container {

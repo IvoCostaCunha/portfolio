@@ -1,8 +1,16 @@
 const express = require('express')
 const compression = require('compression')
 const expressRateLimit = require('express-rate-limit')
-// const helmet = require('helmet')
 const path = require('path')
+// const helmet = require('helmet')
+
+let ssl = false
+
+process.argv.forEach((val, index, array) => {
+  if(val === "-ssl") {
+    ssl = true
+  }
+})
 
 const expressRateLimiter = expressRateLimit({
   windowMs: 6000,
@@ -19,8 +27,7 @@ const log = function (req, res, next) {
 }
 
 const app = express()
-const port = 80;
-
+const port = ssl ? 443 : 80
 
 // app.use(helmet({
 //   contentSecurityPolicy: {
@@ -38,10 +45,6 @@ app.use(expressRateLimiter)
 app.use(log)
 app.use(express.static(path.join(__dirname, '/dist/portfolio-app/browser')))
 
-app.get("/test", (req, res) => {
-  res.status(200).send("test")
-})
-
 let server = app.listen(port, () => {
-  console.log('Server online on : ' + server.address().port);
+  console.log('Server online on port: ' + server.address().port);
 })
