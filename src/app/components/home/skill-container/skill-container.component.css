@@ -15,7 +15,6 @@
 
 .tag {
   max-height: 1.5em;
-  background-color: var(--color-accentA);
   max-width: fit-content;
   margin-right: 0.5em;
   margin-bottom: 0.5em;

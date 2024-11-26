@@ -62,10 +62,10 @@ export class HomeComponent implements OnInit {
     `,
     beliefsHTML: `
       I support the Open Source licensing model.
-      Code licensed as <a href="https://opensource.org/">Open Source</a> is typically publicly accessible, modifiable and redistributable depending on the licence conditions. Popular licences are <a href="https://opensource.org/license/MIT">MIT Licence</a>, <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU Licence</a>, <a href="https://opensource.org/license/BSD-3-clause">BSD Licence</a> and <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache2 Licence</a>. Those Licences in general allow to consult, modify and redistribute the code but on different conditions, for example GNU Licence forces the code englobing the licensed GNU code to also be licensed with a GNU Licence. The MIT Licence is less restrictive, since the licensed code can be englobed into a Copyrighted Closed Source code, so each licence have its use case.<br>
-      The most important to me is that the source code can be read. I believe that source code should be open to anyone using the product which is the said code compiled. It can then be trusted if the person using the product is able to understand the source code, or at least have anyone willing to verify it for him or her.<br>
-      Finally if the code is open then it's also shared publicly and I think in cases of smaller projects or projects with good documentation a lot can be learned from them.<br>
-      Since it's also redistributable a competent person can modify the Open Source code to adapt it to her or his needs, a good example being the <a href="https://www.vim.org/">Vim</a> command line text editor and its other version in <a href="https://www.lua.org/">Lua</a> <a href="https://neovim.io/">Neovim</a>.
+      Code licensed as <a href="https://opensource.org/">Open Source</a> is publicly accessible, modifiable and redistributable depending on the licence conditions. Popular licences are <a href="https://opensource.org/license/MIT">MIT Licence</a>, <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 Licence</a>, <a href="https://opensource.org/license/BSD-3-clause">BSD Licence</a> and <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2 Licence</a>. Those Licences in general allow to consult, modify and redistribute the code but on different conditions, for example GPLv3 Licence forces the code englobing the licensed GPLv3 code to also be licensed with the same Licence. The MIT Licence is less restrictive, since the licensed code can be englobed into a Copyrighted Closed Source code, so each licence has its use case.<br>
+      The most important to me is that the source code can be read. I believe that source code should be open to anyone using the product which is the said code compiled. It can then be trusted if the person using the product is able to understand the source code, or has anyone available to verify it for him or her.<br>
+      Since the code is publicly accessible I think in cases of smaller projects or projects with good documentation a lot can be learned from them. <br>
+      Finally since the codebase is also redistributable a competent person can modify the Open Source code to adapt it to her or his needs, a good example being the <a href="https://www.vim.org/">Vim</a> command line text editor and its alternative version in <a href="https://www.lua.org/">Lua</a> <a href="https://neovim.io/">Neovim</a>.
     `,
     languages: [
       {name: "Portuguese", level: "Native (C2)"},
@@ -154,25 +154,32 @@ export class HomeComponent implements OnInit {
         title: "BTS SIO",
         year: "2016-2018",
         description: "Advanced Technician Diploma from the Lycée Estienne d'Orves (Nice, France).",
-        filePath: ""
+        filePath: "assets/files/bts-sio/bts-sio.pdf",
+        link: "https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers"
       },
       {
         title: "MIAGE Bachelor Degree",
         year: "2018-2020",
         description: "Bachelor Degree from the Université Côte d'Azur (Nice, France).",
-        filePath: ""
+        filePath: "",
+        link: "https://www.miage.fr/reseau-miage-france/"
       },
       {
         title: "Master MIAGE",
         year: "2020-2023",
-        description: "Master MIAGE INTENSE from the Université Côte d'Azur (Nice, France).",
-        filePath: ""
+        description: "Master from the Université Côte d'Azur (Nice, France).",
+        filePath: "",
+        link: "https://univ-cotedazur.fr/formation/offre-de-formation/master-methodes-informatiques-appliquees-a-la-gestion-des-entreprises-miage-parcours-numerique-responsable-numres"
       },
       {
         title: "TOEIC (Written) (Score 920)",
         year: "2023",
-        description: "English test certifiying my ability to understand and write English",
-        filePath: "assets/imgs/toeic/toeic.pdf"
+        description: `
+          English test certifiying my ability to understand and write English<br>
+          Valid until 2025.
+          `,
+        filePath: "assets/files/toeic/toeic.pdf",
+        link: "https://www.ets.org/toeic.html"
       }
 
     ]

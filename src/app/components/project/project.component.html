@@ -19,7 +19,7 @@
       <i class="bi bi-github"></i> GitHub
     </button>
     <button class="project-links" (click)="onClickRedirect(project.link)"
-    *ngIf="project.link !== '' ">
+    *ngIf="checkProjectLink(project.link) === true">
       <i class="bi bi-link"></i> Website
     </button>
     <button class="project-links" (click)="onClickDownload(project.doc)"

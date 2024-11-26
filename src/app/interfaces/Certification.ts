@@ -3,4 +3,5 @@ export interface Certification {
   year: string
   description: string
   filePath: string
+  link: string
 }

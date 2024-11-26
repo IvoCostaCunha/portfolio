@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: nextart-semibold;
-    src: url("fonts/next-art/NEXT\ ART_SemiBold.otf");
+    src: url("fonts/next-art/NEXT-ART-SemiBold.otf");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,10 +27,19 @@
         --color-containerB: #243D42;
         --color-subcontainer-background: #393D5A;
         --color-subcontainer-border: white;
-        --color-accentA: #F54642;
-        --color-accentB: #F51F01;
-        --color-accentC: #614866;
+
+        --color-accentA: #545BA8;
+        --color-accentB: #4282D2;
+        --color-accent-positive: #47AD8D;
+        --color-accent-negative: #545BA8;
+
         --color-font: white;
+
+        /*Links*/
+        --color-link: #9370DB;
+        --color-active-link: #4282D2;
+        --color-visited-link: #BA55D3;
+
     }
 }
 
@@ -41,10 +50,19 @@
         --color-containerB: #F2F2F2;
         --color-subcontainer-background: #D9D9D9;
         --color-subcontainer-border: #D9D9D9;
+
         --color-accentA: #99AABF;
         --color-accentB: #5496BF;
-        --color-accentC: #5496BF;
+        --color-accent-positive: #47AD8D;
+        --color-accent-negative: #99AABF;
+
         --color-font: black;
+
+        /*Links*/
+        /*--color-link: #0000EE;*/
+        --color-link: #3368B8;
+        --color-active-link: #5496BF;
+        --color-visited-link: #551A8B;
     }
 }
 
@@ -103,8 +121,16 @@ button:hover {
 }
 
 a {
-    color: var(--color-font);
+    color: var(--color-link);
     text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-active-link)
+}
+
+a:visited {
+  color: var(--color-visited-link)
 }
 
 a:hover {

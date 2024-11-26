@@ -7,9 +7,14 @@
     </div>
     <div class="certification-bottom">
       <span class="certification-description" [innerHTML]="c.description"></span>
-      <button *ngIf="c.filePath !== ''" class="certification-download-button" (click)="onClickDownload(c.filePath)">
-        <i class="bi bi-arrow-down-circle-fill"></i> PDF
-      </button>
+      <div class="button-container">
+        <button *ngIf="c.filePath !== ''" class="certification-button" (click)="onClickDownload(c.filePath)">
+          <i class="bi bi-arrow-down-circle-fill"></i> PDF
+        </button>
+        <button *ngIf="c.link !== ''" class="certification-button" (click)="onClickDownload(c.link)">
+          <i class="bi bi-link"></i> Link
+        </button>
+      </div>
     </div>
   </div>
   </div>

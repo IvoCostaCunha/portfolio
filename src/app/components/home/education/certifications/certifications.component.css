@@ -58,7 +58,15 @@
   flex-grow: 1;
 }
 
-.certification-download-button {
+.button-container {
+  display: flex;
+  flex-direction:row;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 0.5em;
+
+}
+
+.certification-button {
   max-width: fit-content;
-  margin-left: 1em;
 }

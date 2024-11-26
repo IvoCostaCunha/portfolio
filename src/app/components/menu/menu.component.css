@@ -6,6 +6,11 @@
   text-decoration: none;
 }
 
+.menu-links:visited {
+  color: var(--color-link);
+}
+
 .menu-links:hover {
   text-decoration: underline;
+  color: var(--color-active-link);
 }

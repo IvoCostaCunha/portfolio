@@ -22,6 +22,7 @@
   @media (max-width: 1400px) {
       max-width: 70%;
       max-height: auto;
+      margin-top: 1em;
   }
 
   @media (orientation: portrait) {

@@ -19,6 +19,13 @@ import Files from '../../utils/Files';
 export class ProjectComponent {
   @Input() project: Project = {title: "", year: "", tags: [], link: "", imgs: [], doc: "", githubLink: "", description: ""}
 
+  // TODO: Should verify if url is not localurl but with additional options
+  checkProjectLink = (url: string) => {
+    let localUrl:string = document.location.href
+    let check:boolean = url !== localUrl && url !== "" && url ? true : false
+    return check
+  }
+
   onClickDownload = (f: any) => {Files.onClickDownload(f)}
   onClickRedirect = (l: any) => {RedirectionsUtils.onClickRedirect(l)}
 }

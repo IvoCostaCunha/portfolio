@@ -14,3 +14,7 @@
   flex: 0 1 auto;
   text-align: center;
 }
+
+a:visited {
+  color: var(--color-link)
+}

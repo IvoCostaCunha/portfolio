@@ -14,26 +14,24 @@ import { Skill } from '../../../interfaces/Skill';
 })
 export class SkillContainerComponent implements OnInit {
   @Input() skills: Skill[] = []
-  colorAccentA: string = ""
-  colorAccentB: string = ""
+  colorPositive: string = ""
+  colorNegative: string = ""
 
-  mediaQuery: any = window.matchMedia("(prefers-color-scheme: light)")
+  mediaQuery: any = window.matchMedia("(prefers-color-scheme: light)" || "(prefers-color-scheme: dark)")
 
   ngOnInit() {
     console.log(this.mediaQuery)
-    this.colorAccentA = getComputedStyle(document.body).getPropertyValue("--color-accentA")
-    this.colorAccentB = getComputedStyle(document.body).getPropertyValue("--color-accentC")
-    this.mediaQuery.addEventListener("change", (e: Event) => {
-      this.colorAccentA = getComputedStyle(document.body).getPropertyValue("--color-accentA")
-      this.colorAccentB = getComputedStyle(document.body).getPropertyValue("--color-accentC")
+    this.colorPositive = getComputedStyle(document.body).getPropertyValue("--color-accent-positive")
+    this.colorNegative = getComputedStyle(document.body).getPropertyValue("--color-accent-negative")
+    this.mediaQuery.addEventListener("change", () => {
+      console.log("Mode changed.")
+      this.colorPositive = getComputedStyle(document.body).getPropertyValue("--color-accent-positive")
+      this.colorNegative = getComputedStyle(document.body).getPropertyValue("--color-accent-negative")
     })
   }
 
   getGradient(percent: number): string {
-    let backgroundGradient: string = `background: linear-gradient(90deg, ${this.colorAccentA} ${percent}%, ${this.colorAccentB} ${100-percent}%);`
-    if(percent < 50) {
-      backgroundGradient = `background: linear-gradient(to left, ${this.colorAccentA} ${100-percent}%, ${this.colorAccentB} ${percent}%);`
-    }
+    let backgroundGradient: string = `background: linear-gradient(to right, ${this.colorPositive} ${percent}%, ${this.colorNegative} ${percent}%);`
     return  backgroundGradient;
   }
 }

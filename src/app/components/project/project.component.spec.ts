@@ -20,4 +20,14 @@ describe('ProjectComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should filter project links", ()=> {
+    const emptyLink = ""
+    const localLink = document.location.href
+    const correctLink = "https://developer.mozilla.org/en-US/"
+
+    expect(component.checkProjectLink(emptyLink)).toBe(false)
+    expect(component.checkProjectLink(localLink)).toBe(false)
+    expect(component.checkProjectLink(correctLink)).toBe(true)
+  })
 });
