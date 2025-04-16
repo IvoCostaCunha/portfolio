@@ -7,9 +7,9 @@
 4.  [SSL](#ssl)
 5.  [Tests](#tests)
 6.  [Angular App](#angular-app)
-  1. [Components](#components)
-  2. [Interfaces](#interfaces)
-  3. [Utils](#utils)
+    1.  [Components](#components)
+    2.  [Interfaces](#interfaces)
+    3.  [Utils](#utils)
 
 ## Introduction
 Portfolio is the general name of the project which objective is to build a website containing my portfolio in a webpage format.
