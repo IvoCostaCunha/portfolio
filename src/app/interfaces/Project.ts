@@ -6,5 +6,6 @@ export interface Project {
   imgs: string[]
   doc: string
   githubLink: string
+  gitlabLink: String
   description: string
 }

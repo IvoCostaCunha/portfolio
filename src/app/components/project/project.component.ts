@@ -17,7 +17,7 @@ import Files from '../../utils/Files';
   styleUrl: './project.component.css'
 })
 export class ProjectComponent {
-  @Input() project: Project = {title: "", year: "", tags: [], link: "", imgs: [], doc: "", githubLink: "", description: ""}
+  @Input() project: Project = {title: "", year: "", tags: [], link: "", imgs: [], doc: "", githubLink: "", gitlabLink: "", description: ""}
 
   // TODO: Should verify if url is not localurl but with additional options
   checkProjectLink = (url: string) => {

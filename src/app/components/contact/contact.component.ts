@@ -14,7 +14,7 @@ import { Contact } from '../../interfaces/Contact';
 })
 
 export class ContactComponent {
-  @Input() contact: Contact = {tel: "", mail: "", github: "", linkedIn: ""}
+  @Input() contact: Contact = {tel: "", mail: "", github: "", gitlab: "", linkedIn: ""}
   onClickRedirect = (l: any) => {Redirections.onClickRedirect(l)}
   onClickSendMail = (a: any) => {Mail.sendMail(a)}
 }

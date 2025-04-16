@@ -39,6 +39,11 @@ yarn-error.log
 testem.log
 /typings
 
+# Certificates
+domain-cert.pem
+private-key.pem
+public-key.pem
+
 # System files
 .DS_Store
 Thumbs.db

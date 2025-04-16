@@ -20,7 +20,6 @@ export class SkillContainerComponent implements OnInit {
   mediaQuery: any = window.matchMedia("(prefers-color-scheme: light)" || "(prefers-color-scheme: dark)")
 
   ngOnInit() {
-    console.log(this.mediaQuery)
     this.colorPositive = getComputedStyle(document.body).getPropertyValue("--color-accent-positive")
     this.colorNegative = getComputedStyle(document.body).getPropertyValue("--color-accent-negative")
     this.mediaQuery.addEventListener("change", () => {

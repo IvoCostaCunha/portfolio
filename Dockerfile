@@ -1,7 +1,7 @@
 FROM node:22.11.0-alpine3.20 AS build_step
 
 WORKDIR /home/app/portfolio
-COPY ./package-lock.json ./package.json ./angular.json ./tsconfig.app.json ./tsconfig.json ./tsconfig.spec.json  ./
+COPY ./package-lock.json ./package.json ./angular.json ./tsconfig.app.json ./tsconfig.json ./tsconfig.spec.json ./
 COPY ./src ./src
 
 RUN npm install

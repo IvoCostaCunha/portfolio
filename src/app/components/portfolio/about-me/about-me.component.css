@@ -21,8 +21,8 @@
 }
 
 .photo {
-  max-height: 600px;
-  max-width: 400px;
+  max-width: 320px;
+  max-height: auto;
   border-radius: 1em;
   align-self: center;
   margin-top: 2.5em;

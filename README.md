@@ -14,6 +14,8 @@ I use [Express](https://github.com/expressjs/express.git) as a server.
 
 I would suggest to do the installation via Docker, I think it is the easiest way since the installation isn't platform dependent. However, the installation can also be done by NPM and the app run by Node.
 
+Check the doc at ```./doc/portfolio-documentation.md``` for SSL if you intend to use SSL versions !
+
 ### Node
 ```sh
 npm install
