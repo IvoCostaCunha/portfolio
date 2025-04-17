@@ -22,18 +22,15 @@
 
 .photo {
   max-width: 320px;
-  max-height: auto;
   border-radius: 1em;
   align-self: center;
   margin-top: 2.5em;
 
   @media (orientation: landscape) and (max-width: 1400px) {
       max-width: 70%;
-      max-height: auto;
   }
 
   @media (orientation: portrait) {
     max-width: 100%;
-    max-height: auto;
   }
 }

@@ -43,7 +43,6 @@
   border-radius: 1em;
   @media (orientation: portrait),(max-width: 800px) {
       align-self: center;
-      margin-right: none;
       margin-bottom: 0.5em;;
   }
 }

@@ -69,6 +69,6 @@ app.use(express.static(path.join(__dirname, '/dist/portfolio-app/browser')))
 let server = ssl ? https.createServer(options, app) : http.createServer(app)
 
 server.listen(port, () => {
-  console.log(`Server online on: 192.168.0.1:${server.address().port}`);
+  console.log(`Server online on port: ${server.address().port}`);
   console.log(`Server listening : ${server.listening}`)
 })

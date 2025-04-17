@@ -24,8 +24,6 @@
 
   @media (orientation: portrait),(max-width: 1400px) {
       align-self: stretch;
-      margin-right: none;
-      margin-left: none;
   }
 }
 
