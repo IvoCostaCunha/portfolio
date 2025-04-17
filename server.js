@@ -33,17 +33,17 @@ const log = function(req, res, next) {
 }
 
 if (ssl) {
-  fs.accessSync("private-key.pem", fs.constants.R_OK, (err) => {
+  fs.accessSync("private.key.pem", fs.constants.R_OK, (err) => {
     console.error("Private key is missing or cannot be read.")
   })
 
-  fs.accessSync("domain-cert.pem", fs.constants.R_OK, (err) => {
+  fs.accessSync("domain.cert.pem", fs.constants.R_OK, (err) => {
     console.error("Domain certificate is missing or cannot be read.")
   })
 
   options = {
-    key: fs.readFileSync("private-key.pem"),
-    cert: fs.readFileSync("domain-cert.pem")
+    key: fs.readFileSync("private.key.pem"),
+    cert: fs.readFileSync("domain.cert.pem")
   }
 }
 

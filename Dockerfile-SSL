@@ -16,7 +16,7 @@ WORKDIR /home/app/portofolio
 COPY --from=build_step /home/app/portfolio/dist ./dist
 # Copying built files into /usr/node/dist
 COPY --from=build_step /home/app/portfolio/node_modules ./node_modules
-COPY ./server.js ./private-key.pem ./public-key.pem ./domain-cert.pem ./
+COPY ./server.js ./private.key.pem ./public.key.pem ./domain.cert.pem ./
 
 EXPOSE 443
 CMD ["node", "server.js", "-ssl"]
