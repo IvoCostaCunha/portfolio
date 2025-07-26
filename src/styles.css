@@ -1,166 +1,164 @@
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
 @font-face {
-  font-family: confortaa-regular;
-  src: url("fonts/confortaa/Comfortaa-Regular.ttf");
+    font-family: confortaa-regular;
+    src: url("../public/fonts/confortaa/Comfortaa-Regular.ttf");
 }
 
 @font-face {
-  font-family: confortaa-bold;
-  src: url("fonts/confortaa/Comfortaa-Bold.ttf");
+    font-family: confortaa-bold;
+    src: url("../public/fonts/confortaa/Comfortaa-Bold.ttf");
 }
 
 @font-face {
-  font-family: agenorneue-regular;
-  src: url("fonts/agenorneue/AgenorNeue-Regular.otf")
+    font-family: agenorneue-regular;
+    src: url("../public/fonts/agenorneue/AgenorNeue-Regular.otf")
 }
 
 @font-face {
-  font-family: nextart-semibold;
-  src: url("fonts/next-art/NEXT-ART-SemiBold.otf");
+    font-family: nextart-semibold;
+    src: url("../public/fonts/next-art/NEXT-ART-SemiBold.otf");
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #243D42;
-    --color-containerA: #243D42;
-    --color-containerB: #243D42;
-    --color-subcontainer-background: #393D5A;
-    --color-subcontainer-border: white;
+    :root {
+        --color-background: #243D42;
+        --color-containerA: #243D42;
+        --color-containerB: #243D42;
+        --color-subcontainer-background: #393D5A;
+        --color-subcontainer-border: white;
 
-    --color-accentA: #545BA8;
-    --color-accentB: #4282D2;
-    --color-accent-positive: #47AD8D;
-    --color-accent-negative: #545BA8;
+        --color-accentA: #545BA8;
+        --color-accentB: #4282D2;
+        --color-accent-positive: #47AD8D;
+        --color-accent-negative: #545BA8;
 
-    --color-font: white;
+        --color-font: white;
 
-    /*Links*/
-    --color-link: #9370DB;
-    --color-active-link: #4282D2;
-    --color-visited-link: #BA55D3;
+        /*Links*/
+        --color-link: #9370DB;
+        --color-active-link: #4282D2;
+        --color-visited-link: #BA55D3;
 
-  }
+    }
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --color-background: #F2F2F2;
-    ;
-    --color-containerA: #F2F2F2;
-    --color-containerB: #F2F2F2;
-    --color-subcontainer-background: #D9D9D9;
-    --color-subcontainer-border: #D9D9D9;
+    :root {
+        --color-background: #F2F2F2;
+        ;
+        --color-containerA: #F2F2F2;
+        --color-containerB: #F2F2F2;
+        --color-subcontainer-background: #D9D9D9;
+        --color-subcontainer-border: #D9D9D9;
 
-    --color-accentA: #99AABF;
-    --color-accentB: #5496BF;
-    --color-accent-positive: #47AD8D;
-    --color-accent-negative: #99AABF;
+        --color-accentA: #99AABF;
+        --color-accentB: #5496BF;
+        --color-accent-positive: #47AD8D;
+        --color-accent-negative: #99AABF;
 
-    --color-font: black;
+        --color-font: black;
 
-    /*Links*/
-    /*--color-link: #0000EE;*/
-    --color-link: #3368B8;
-    --color-active-link: #5496BF;
-    --color-visited-link: #551A8B;
-  }
+        /*Links*/
+        /*--color-link: #0000EE;*/
+        --color-link: #3368B8;
+        --color-active-link: #5496BF;
+        --color-visited-link: #551A8B;
+    }
 }
 
 html,
 body {
-  margin: 0;
-  height: 100%;
-  max-width: 90em;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "agenorneue-regular";
-  font-size: medium;
-  color: var(--color-font);
-  background-color: var(--color-background);
+    margin: 0;
+    height: 100%;
+    max-width: 90em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "agenorneue-regular";
+    font-size: 1em;
+    color: var(--color-font);
+    background-color: var(--color-background);
 }
 
 h1 {
-  font-family: "nextart-semibold";
-  font-size: 1.5em;
+    font-family: "nextart-semibold";
+    font-size: 1.3em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.1em solid var(--color-font);
 }
 
 h2 {
-  font-family: "confortaa-bold";
-  font-size: 1.2em;
+    font-family: "confortaa-bold";
+    font-size: 1em;
 }
 
 caption {
-  font-family: "agenorneue-regular";
-  font-size: small;
-  font-style: italic;
-  text-align: center;
-  align-self: center;
-  width: fit-content;
-  margin-top: 0.5em;
+    font-family: "agenorneue-regular";
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+    align-self: center;
+    width: fit-content;
+    margin-top: 0.5em;
 }
 
-button {
-  border-radius: 0.5em;
-  box-shadow: none;
-  border: none;
-  text-align: center;
-  background-color: var(--color-accentA);
+.link-button {
+    max-width: fit-content;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: none;
+    border: none;
+    text-align: center;
+    background-color: var(--color-accentA);
 
-  padding: 0.5em;
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
-
-  font-family: "agenorneue-regular";
-  font-size: medium;
-  color: var(--color-font);
+    font-family: "agenorneue-regular";
+    font-size: medium;
+    color: var(--color-font);
+    text-decoration: none;
 }
 
-button:hover {
-  transition: 250ms;
-  background-color: var(--color-accentB);
-  transform: translate(0em, -0.2em);
-  cursor: pointer;
+.link-button:hover {
+    transition: 250ms;
+    background-color: var(--color-accentB);
+    transform: translate(0em, -0.2em);
+    cursor: pointer;
+}
+
+.link-button:active {
+    color: var(--color-font)
+}
+
+.link-button:visited {
+    color: var(--color-font);
 }
 
 a {
-  color: var(--color-link);
-  text-decoration: underline;
+    color: var(--color-link);
+    text-decoration: underline;
 }
 
 a:active {
-  color: var(--color-active-link)
+    color: var(--color-active-link)
 }
 
 a:visited {
-  color: var(--color-visited-link)
+    color: var(--color-visited-link)
 }
 
 a:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 span {
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
 br {
-  margin-bottom: 0.5em;
-}
-
-.vm {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.hvm {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .paragraphs {
-  line-height: 1.2em;
-  text-align: justify;
+    line-height: 1.2em;
+    text-align: justify;
 }

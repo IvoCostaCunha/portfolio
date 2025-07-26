@@ -5,23 +5,33 @@
     <app-contact [contact]="websiteData.contact"></app-contact>
   </div>
   <div class="right-container">
-    <app-about-me [aboutMeHTML]="websiteData.aboutMeHTML" [workMethodsHTML]="websiteData.workMethodsHTML" [mePhotoPath]="websiteData.mePhotoPath"></app-about-me>
-
-    <app-language-container [languages]="websiteData.languages"></app-language-container>
+    <app-about-me
+    [aboutMeHTML]="websiteData.aboutMeHTML"
+    [workMethodsHTML]="websiteData.workMethodsHTML"
+    [mePhotoPath]="websiteData.mePhotoPath"></app-about-me>
 
     <a id="projects"></a>
-    <app-skill-container [skills]="websiteData.skills"></app-skill-container>
     <h1>Projects</h1>
     <div class="project-container">
-        <app-project *ngFor="let p of websiteData.projects" [project]="p"></app-project>
+        <app-project
+        *ngFor="let p of websiteData.projects"
+        [project]="p"></app-project>
     </div>
+
+    <app-skill-container [skills]="websiteData.skills"></app-skill-container>
 
     <h1>Beliefs</h1>
     <div class="paragraphs" [innerHTML]="websiteData.beliefsHTML"></div>
 
     <a id="education"></a>
-    <app-education [eduIntroHTML]="websiteData.eduIntroHTML" [eduPhotoPath]="websiteData.eduPhotoPath" [certifications]="websiteData.certifications"></app-education>
+    <app-education
+    [eduIntroHTML]="websiteData.eduIntroHTML"
+    [eduPhotoPath]="websiteData.eduPhotoPath"
+    [certifications]="websiteData.certifications"></app-education>
 
-    <app-footer></app-footer>
+    <app-language-container
+    [languages]="websiteData.languages"></app-language-container>
+
+    <app-footer [version]="version"></app-footer>
   </div>
 </div>

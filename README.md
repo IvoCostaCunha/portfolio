@@ -1,5 +1,5 @@
 # Portfolio
-This Angular app is my current portfolio frontend. It is not finished, a lot still needs to be done, it is a base for future updates.
+This Angular app is my current portfolio frontend. It is not finished but it is a base for future updates.
 This frontend may in the future be connected to an [API](https://github.com/IvoCostaCunha/portfolio-api.git) but for now I am trying to get the static part operational and looking good.
 
 *(I might in the future rewrite the app with React instead since I find that Angular generates too much files.)*
@@ -7,8 +7,8 @@ This frontend may in the future be connected to an [API](https://github.com/IvoC
 I use [Express](https://github.com/expressjs/express.git) as a server.
 
 # Requirements
-- [NodeJS](https://nodejs.org/en) (Tested with Node@23.1.0)
-- [Docker](https://www.docker.com/) (Tested with Docker@27.2.0) (Optional)
+- [NodeJS](https://nodejs.org/en) (Tested with Node@22.17.1)
+- [Docker](https://www.docker.com/) (Tested with Docker@28.3.2) (Optional)
 
 ## Installation
 
@@ -54,7 +54,7 @@ docker stop <CONTAINER ID>
 ### Delete Docker Image(s)
 ```sh
 # Find the Docker IMAGE ID(s)
-docker images list
+docker image list
 # Delete a Docker image
 docker rmi <IMAGE ID>
 ```

@@ -1,5 +1,5 @@
-<h2 class="certifications-list-title"> Certifications </h2>
-<div class="certification-container vm" >
+<h1> Certifications </h1>
+<div class="certification-container" >
   <div class="certification" *ngFor="let c of certifications">
     <div class="title-top">
       <span class="title" [innerHTML]="c.title"></span>
@@ -7,13 +7,19 @@
     </div>
     <div class="certification-bottom">
       <span class="certification-description" [innerHTML]="c.description"></span>
-      <div class="button-container">
-        <button *ngIf="c.filePath !== ''" class="certification-button" (click)="onClickDownload(c.filePath)">
+      <div class="link-container">
+        <a
+        *ngIf="c.filePath !== ''"
+        class="link-button"
+        href="{{c.filePath}}">
           <i class="bi bi-arrow-down-circle-fill"></i> PDF
-        </button>
-        <button *ngIf="c.link !== ''" class="certification-button" (click)="onClickDownload(c.link)">
+        </a>
+        <a
+        *ngIf="c.link !== ''"
+        class="link-button"
+        href="{{c.link}}">
           <i class="bi bi-link"></i> Link
-        </button>
+        </a>
       </div>
     </div>
   </div>

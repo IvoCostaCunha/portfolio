@@ -1,24 +1,29 @@
 <div class="name">
-  <h1>Ivo Costa Cunha</h1>
-  <h2><i class="bi bi-arrow-return-right"></i>&nbsp;<i class="bi bi-braces-asterisk"></i> Developper</h2>
+    <h1>Ivo Costa Cunha</h1>
+    <h2>
+        <i class="bi bi-arrow-return-right"></i>&nbsp;
+        <i class="bi bi-braces-asterisk"></i>&nbsp;Developer
+    </h2>
 </div>
-<h2> Contact </h2>
-<div>
-  <span><i class="bi bi-phone-fill"></i> &nbsp;{{contact.tel}}</span><br>
-  <span><i class="bi bi-envelope-at-fill"></i> &nbsp;<a (click)="onClickSendMail(contact.mail)">{{contact.mail}}</a></span>
-  <div class="socials-container">
-    <button class="social" (click)="onClickRedirect(contact.gitlab)">
-      <i class="bi bi-gitlab"></i>
-      <!-- GitLab -->
-    </button>
-    <button class="social" (click)="onClickRedirect(contact.github)">
-      <i class="bi bi-github"></i>
-      <!-- GitLab -->
-    </button>
-
-    <button class="social" (click)="onClickRedirect(contact.linkedIn)">
-      <i class="bi bi-linkedin"></i>
-      LinkedIn
-    </button>
-  </div>
+<h2>Contact</h2>
+<div class="contacts-container">
+    <span class=>
+        <i class="bi bi-envelope-at-fill"></i>&nbsp;
+        <a (click)="sendMail(contact.mail)">{{contact.mail}}</a><br>
+        ~ For professional matters.
+    </span><br>
+    <span>
+        <i class="bi bi-envelope-at-fill"></i>&nbsp;
+        <a (click)="sendMail(contact.mail)">{{contact.proMail}}</a><br>
+        ~ For development matters.
+    </span>
+    <span><i class="bi bi-phone-fill"></i>&nbsp;{{contact.tel}}</span><br>
+</div>
+<div class="social-container">
+    <a class="link-button" href="{{contact.gitlab}}">
+        <i class="bi bi-gitlab"></i></a>
+    <a class="link-button" href="{{contact.github}}">
+        <i class="bi bi-github"></i></a>
+    <a class="link-button" href="{{contact.linkedIn}}">
+        <i class="bi bi-linkedin"></i>&nbsp;LinkedIn</a>
 </div>

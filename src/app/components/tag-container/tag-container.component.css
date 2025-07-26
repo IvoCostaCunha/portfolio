@@ -1,17 +1,17 @@
 .tag-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  gap: 0.5em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5em;
 }
 
 .tag {
-  max-height: 1.5em;
-  background-color: var(--color-accentA);
-  max-width: fit-content;
-  padding: 0.5em;
-  border-radius: 0.5em;
-  font-size: 0.9em;
+    max-height: 1.5em;
+    background-color: var(--color-accentA);
+    max-width: fit-content;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 0.9em;
 }

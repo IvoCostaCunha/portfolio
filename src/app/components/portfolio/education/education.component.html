@@ -1,9 +1,14 @@
 <h1>Education</h1>
 <div class="education-container">
-  <div [innerHTML]="eduIntroHTML" class="paragraphs"></div>
-  <figure class="photo-figure" alt="nice-figure">
-    <img tabindex="0" [src]="eduPhotoPath" alt="nice-photo" class="photo" />
-    <caption>"Nissa la bella", <a  href='https://www.pexels.com/fr-fr/photo/ville-rue-ete-cote-17506366/'>image</a> by Willian Justen de Vasconcellos.</caption>
-  </figure>
+    <div [innerHTML]="eduIntroHTML" class="paragraphs"></div>
+    <figure class="photo-figure" alt="nice-figure">
+        <img tabindex="0" [src]="eduPhotoPath" alt="nice-photo" class="photo" />
+        <caption>"Nissa la bella",
+            <a href='https://www.pexels.com/fr-fr/photo/ville-rue-ete-cote-17506366/'>
+                image
+            </a>
+            by Willian Justen de Vasconcellos.
+        </caption>
+    </figure>
 </div>
 <app-certifications [certifications]="certifications"></app-certifications>

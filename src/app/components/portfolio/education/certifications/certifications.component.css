@@ -1,70 +1,63 @@
-.certifications-list-title {
-  text-align: center;
-}
-
 .certification-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.5em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5em;
 
-  @media (orientation: portrait), (max-width: 1400px) {
-      flex-direction: column;
-      align-items: stretch;
-      top: 0;
-  }
+    @media (orientation: portrait),
+    (max-width: 1400px) {
+        flex-direction: column;
+        align-items: stretch;
+        top: 0;
+    }
 }
 
 .certification {
-  background-color: var(--color-subcontainer-background);
-  border: solid 1px var(--color-subcontainer-border);
-  border-radius: 1em;
-  padding: 1em;
+    background-color: var(--color-subcontainer-background);
+    border: solid 1px var(--color-subcontainer-border);
+    border-radius: 1em;
+    padding: 1em;
 
-  @media (orientation: portrait),(max-width: 1400px) {
-      align-self: stretch;
-  }
+    @media (orientation: portrait),
+    (max-width: 1400px) {
+        align-self: stretch;
+    }
 }
 
 .title-top {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid var(--color-font);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid var(--color-font);
 }
 
 .title {
-  flex-grow: 1;
-  font-weight: 600;
+    flex-grow: 1;
+    font-weight: 600;
 }
 
 .year {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .certification-bottom {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
 }
 
 .certification-description {
-  margin-top: 0.5em;
-  text-align: left;
-  font-size: medium;
-  flex-grow: 1;
+    margin-top: 0.5em;
+    text-align: left;
+    font-size: medium;
+    flex-grow: 1;
 }
 
-.button-container {
-  display: flex;
-  flex-direction:row;
-  flex-direction: row-reverse;
-  align-items: flex-end;
-  gap: 0.5em;
-
-}
-
-.certification-button {
-  max-width: fit-content;
+.link-container {
+    display: flex;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 0.5em;
 }

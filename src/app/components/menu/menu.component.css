@@ -1,16 +1,16 @@
 .menu {
-  text-align: center;
+    text-align: center;
 }
 
 .menu-links {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .menu-links:visited {
-  color: var(--color-link);
+    color: var(--color-link);
 }
 
 .menu-links:hover {
-  text-decoration: underline;
-  color: var(--color-active-link);
+    text-decoration: underline;
+    color: var(--color-active-link);
 }

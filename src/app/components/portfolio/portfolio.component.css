@@ -13,7 +13,8 @@
 
     background-color: inherit;
 
-    @media (orientation: portrait), (max-width: 1000px) {
+    @media (orientation: portrait),
+    (max-width: 1000px) {
         flex-direction: column;
         padding-left: 0.5em;
         padding-right: 0.5em;
@@ -22,7 +23,7 @@
 
 .left-container {
     box-sizing: border-box;
-    flex: 1 0 fit-content;
+    flex: 0 0 auto;
     padding: 1.5em;
 
 
@@ -30,10 +31,12 @@
 
     @media (orientation: landscape) and (min-width: 1000px) {
         top: 2.5em;
+        width: 25%;
         position: sticky;
     }
 
-    @media (orientation: portrait), (max-width: 1000px) {
+    @media (orientation: portrait),
+    (max-width: 1000px) {
         width: 100%;
         margin-bottom: 1%;
     }
@@ -48,12 +51,12 @@
 
     padding: 1.5em;
     background-color: var(--color-containerB);
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .project-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    gap: 0.5em;
 }
-

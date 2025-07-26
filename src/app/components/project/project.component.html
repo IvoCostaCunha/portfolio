@@ -1,36 +1,31 @@
 <div class="project">
-  <div class="project-top">
-    <span class="title" [innerHTML]="project.title"></span>
-    <span class="year" [innerHTML]="project.year"></span>
-  </div>
+    <div class="project-top">
+        <span class="title" [innerHTML]="project.title"></span>
+        <span class="year" [innerHTML]="project.year"></span>
+    </div>
 
-  <span [innerHTML]="project.description"></span>
+    <span [innerHTML]="project.description"></span>
 
-  <div class="project-mid">
-    <img class="project-img" tabindex="0"
-    [alt]="project.title + '-illustation'"
-    loading="lazy" [src]="project.imgs[0]"
-    (click)="onClickDownload(project.imgs[0])"/>
-    <app-tag-container [tags]="project.tags"></app-tag-container>
-  </div>
-  <div class="project-bottom">
-    <button class="project-links" (click)="onClickRedirect(project.githubLink)"
-    *ngIf="project.githubLink !== '' ">
-      <i class="bi bi-github"></i> GitHub
-    </button>
-    <button class="project-links" (click)="onClickRedirect(project.gitlabLink)"
-    *ngIf="project.gitlabLink !== '' ">
-      <i class="bi bi-gitlab"></i> GitLab
-    </button>
-
-    <button class="project-links" (click)="onClickRedirect(project.link)"
-    *ngIf="checkProjectLink(project.link) === true">
-      <i class="bi bi-link"></i> Website
-    </button>
-    <button class="project-links" (click)="onClickDownload(project.doc)"
-    *ngIf="project.doc !== '' ">
-      <i class="bi bi-paperclip"></i> Report
-    </button>
-  </div>
-
+    <div class="project-mid">
+    <a href="{{project.imgs[0]}}">
+        <img class="project-img" tabindex="0"
+        [alt]="project.title + '-illustation'"
+        loading="lazy" [src]="project.imgs[0]"/>
+        </a>
+        <app-tag-container [tags]="project.tags"></app-tag-container>
+    </div>
+    <div class="project-bottom">
+        <a class="link-button" href="{{project.githubLink}}"
+        *ngIf="project.githubLink !== '' ">
+        <i class="bi bi-github"></i>&nbsp;GitHub</a>
+        <a class="link-button" href="{{project.gitlabLink}}"
+        *ngIf="project.gitlabLink !== '' ">
+        <i class="bi bi-gitlab"></i>&nbsp;GitLab</a>
+        <a class="link-button" href="{{project.link}}"
+        *ngIf="project.link !== '' ">
+        <i class="bi bi-link"></i>&nbsp;Website</a>
+        <a class="link-button" href="{{project.doc}}"
+        *ngIf="project.doc !== '' ">
+        <i class="bi bi-paperclip"></i>Report</a>
+    </div>
 </div>
