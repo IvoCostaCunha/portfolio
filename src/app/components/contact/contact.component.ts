@@ -13,8 +13,7 @@ import { Lib } from '../../lib/lib';
 export class ContactComponent {
     @Input() contact: Contact = {
         tel: "", mail: "", proMail: "",
-        github: "", gitlab: "", linkedIn: ""
+        github: "", codeberg: "", linkedIn: ""
     };
     sendMail = Lib.sendMail;
-    redirect = Lib.redirect;
 }

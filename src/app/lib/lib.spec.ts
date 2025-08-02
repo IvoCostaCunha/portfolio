@@ -64,4 +64,4 @@ describe('Lib', () => {
             lastString = stringTab[i];
         };
     });
-});
+});import { LINK_TYPE } from '../enums/LINK_TYPE';

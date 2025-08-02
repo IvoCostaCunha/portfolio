@@ -1,7 +1,33 @@
 import { Injectable } from '@angular/core';
+import { LINK_TYPE} from '../enums/LINK_TYPE';
 
 @Injectable()
 export class Lib {
+    /**
+     * Array of objets that associate a LINK_TYPE to a Bootstrap icon.
+     */
+    static linkIcons = [
+        { name: LINK_TYPE.GITHUB, icon: "bi bi-github" },
+        { name: LINK_TYPE.GITLAB, icon: "bi bi-codeberg" },
+        { name: LINK_TYPE.CODEBERG, icon: "bi bi-git" },
+        { name: LINK_TYPE.DOC, icon: "bi bi-paperclip" },
+        { name: LINK_TYPE.LINK, icon: "bi bi-link" },
+        { name: LINK_TYPE.LINKEDIN, icon: "bi bi-linkedin" }
+    ];
+
+    /**
+     * Return a Bootstrap icon based on a LINK_TYPE value.
+     * @param linkType - An LINK_TYPE attribute.
+     * @returns string|null - Returns either icon associated with the link type
+     * or null.
+     */
+    static getIcon(linkType: LINK_TYPE) {
+        let icon: string | null = null;
+        Lib.linkIcons.forEach((link) => {
+            if (link.name == linkType) icon = link.icon;
+        });
+        return icon;
+    }
 
     /**
      * Invokes user email default app with a predefined subject.
@@ -39,7 +65,7 @@ export class Lib {
      */
     static redirect(url: string, newTab: boolean = false): void {
         const isCurHref: boolean = Lib.isCurrentHref(url) ? true : false;
-        console.log(newTab, isCurHref)
+        console.log(newTab, isCurHref);
         newTab && !isCurHref && url !== "" ? window.open(url) : window.location.href = url;
     };
 

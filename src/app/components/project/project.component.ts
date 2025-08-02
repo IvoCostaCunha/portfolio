@@ -17,8 +17,7 @@ import { Lib } from '../../lib/lib';
 })
 export class ProjectComponent {
     @Input() project: Project = {
-        title: "", year: "", tags: [], link: "", imgs: [],
-        doc: "", githubLink: "", gitlabLink: "", description: ""
+        title: "", description: "", year: "", tags: [], imgs: [], links: []
     };
-    redirect = Lib.redirect;
+    getIcon = Lib.getIcon;
 }

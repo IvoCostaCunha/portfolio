@@ -3,6 +3,6 @@ export interface Contact {
     mail: string;
     proMail: string;
     github: string;
-    gitlab: string;
+    codeberg: string;
     linkedIn: string;
 }

@@ -149,6 +149,10 @@ a:hover {
     cursor: pointer;
 }
 
+i {
+    font-style: normal;
+}
+
 span {
     margin-bottom: 0.5em;
     margin-top: 0.5em;

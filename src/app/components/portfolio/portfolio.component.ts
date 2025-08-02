@@ -12,6 +12,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { SkillContainerComponent } from './skill-container/skill-container.component';
 import { LanguageContainerComponent } from './language-container/language-container.component';
 import { Lib } from '../../lib/lib';
+import { LINK_TYPE } from '../../enums/LINK_TYPE';
 
 @Component({
     selector: 'app-portfolio',
@@ -37,7 +38,7 @@ export class PortfolioComponent implements OnInit {
             mail: "dev@ivocostacunha.com",
             proMail: "pro@ivocostacunha.com",
             github: "https://github.com/IvoCostaCunha",
-            gitlab: "https://gitlab.com/IvoCostaCunha",
+            codeberg: "https://codeberg.org/ivocostacunha",
             linkedIn: "https://www.linkedin.com/in/ivo-costa-cunha/"
         },
         mePhotoPath: "imgs/site/me/me.jpg",
@@ -80,10 +81,10 @@ export class PortfolioComponent implements OnInit {
                 title: "wasabi-parallel-graph",
                 year: "2021",
                 tags: ["Typescript", "Javascript", "D3.js", "Stencil", "Wasabi Song Corpus", "Semantic Web", "Web 3.0"],
-                link: "",
-                githubLink: "https://github.com/IvoCostaCunha/wasabi-parallel-graph.git",
-                gitlabLink: "https://gitlab.com/IvoCostaCunha/wasabi-parallel-graph.git",
-                doc: "files/ter-wasabi/ter-wasabi.pdf",
+                links: [
+                    { name: LINK_TYPE.GITHUB, url: "https://github.com/IvoCostaCunha/wasabi-parallel-graph.git" },
+                    { name: LINK_TYPE.DOC, url: "files/ter-wasabi/ter-wasabi.pdf" }
+                ],
                 imgs: ["imgs/ter-wasabi/ter-wasabi.png"],
                 description: `
                 A research project within the laboratory <a href="https://www.i3s.unice.fr/en/">I3S</a> in Sophia-Antipolis whose objective was to graphically display with <a href="https://d3js.org/">D3.js</a>, a Javascript library, the characteristics of data retrieved and parsed from the <a href="https://github.com/micbuffa/WasabiDataset">Wasabi Song Corpus</a> using the <a href="https://getstencil.com/">Stencil</a> framework. I worked mostly on data retrieval and parsing. The final objective was for the graph to be able to receive any data from the <a href="https://github.com/micbuffa/WasabiDataset">Wasabi Song Corpus</a>, put in evidence graphically the relevant characteristics of said data and how these are shared with similar data. This project also uses concepts of <a href="https://en.wikipedia.org/wiki/Semantic_Web">Semantic Web</a> research also called Web 3.0 whose objective is to have the all the Web readable by machines.
@@ -93,10 +94,11 @@ export class PortfolioComponent implements OnInit {
                 title: "stegano-image",
                 year: "2022",
                 tags: ["Python", "React", "Flask", "REST API", "Steganography", "Cryptography", "Amazon S3", "PostgreSQL"],
-                link: "",
-                githubLink: "https://github.com/IvoCostaCunha/stegano-image.git",
-                gitlabLink: "https://gitlab.com/IvoCostaCunha/stegano-image.git",
-                doc: "files/stegano-image/stegano-image.pdf",
+                links: [
+                    { name: LINK_TYPE.GITHUB, url: "https://github.com/IvoCostaCunha/stegano-image.git" },
+                    { name: LINK_TYPE.CODEBERG, url: "https://codeberg.org/ivocostacunha/stegano-image" },
+                    { name: LINK_TYPE.DOC, url: "files/stegano-image/stegano-image.pdf" }
+                ],
                 imgs: ["imgs/stegano-image/stegano-image.png"],
                 description: `
                 Website done with <a href="https://react.dev/">React</a> and a <a href="https://www.python.org/">Python</a> <a href="https://flask.palletsprojects.com/en/stable/">Flask</a> API that together constitute an app that allow registered users to sign images in a png format using an implementation of the <a href="https://www.researchgate.net/publication/330565811_Hiding_data_in_images_using_DCT_steganography_techniques_with_compression_algorithms">LSB</a> (Least Significant Bit) <a href="https://en.wikipedia.org/wiki/Steganography">steganographic</a> method. Right now the site is not deployed due to the cost since it uses multiple non free services. Started as a student projet but now I'm looking to improve it meaningfully since I didn't had time to implement all I would have liked. This project at the time even incomplete allowed me learn about cryptographic techniques, authentification and security in general.
@@ -107,10 +109,10 @@ export class PortfolioComponent implements OnInit {
                 title: "audio-player",
                 year: "2022",
                 tags: ["Pure Web Component", "Javascript", "WebAudio"],
-                link: "",
-                githubLink: "https://github.com/IvoCostaCunha/audio-player.git",
-                gitlabLink: "https://gitlab.com/IvoCostaCunha/audio-player.git",
-                doc: "",
+                links: [
+                    { name: LINK_TYPE.GITHUB, url: "https://github.com/IvoCostaCunha/audio-player.git" },
+                    { name: LINK_TYPE.CODEBERG, url: "https://codeberg.org/ivocostacunha/audio-player" }
+                ],
                 imgs: ["imgs/audio-player/audio-player.png"],
                 description: `
                 Audio-player project that allows to play music in the web using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, and modify the stream of music using frequency, speed and stereo parameters. A simple project but coded in pure Javascript. With it I learned about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">Web Components</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">shadow DOM</a>, techniques which <a href="https://react.dev/">React</a> and <a href="https://angular.dev/">Angular</a> rely upon heavily.
@@ -120,10 +122,11 @@ export class PortfolioComponent implements OnInit {
                 title: "portfolio",
                 year: "2023",
                 tags: ["Angular", "Typescript", "Express", "Docker"],
-                link: "#about-me",
-                githubLink: "https://github.com/IvoCostaCunha/portfolio.git",
-                gitlabLink: "https://gitlab.com/IvoCostaCunha/portfolio.git",
-                doc: "",
+                links: [
+                    { name: LINK_TYPE.GITHUB, url: "https://github.com/IvoCostaCunha/portfolio.git" },
+                    { name: LINK_TYPE.CODEBERG, url: "https://codeberg.org/ivocostacunha/portfolio" },
+                    { name: LINK_TYPE.LINK, url: "#about-me" }
+                ],
                 imgs: ["imgs/portfolio-app/portfolio-app.png"],
                 description: `
                 My personal portfolio to present myself and my projects. For now just a static website without any API or backend but I'm looking for improving it in a near future. It is build upon the <a href="https://angular.dev/">Angular</a> framework. I'm planning in the future to build an API that would allow me to edit content without the need to redeploy the entire website.
