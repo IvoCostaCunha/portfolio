@@ -8,18 +8,21 @@
     <div class="certification-bottom">
       <span class="certification-description" [innerHTML]="c.description"></span>
       <div class="link-container">
+      @if (c.filePath !== "") {
         <a
-        *ngIf="c.filePath !== ''"
         class="link-button"
         href="{{c.filePath}}">
-          <i class="bi bi-arrow-down-circle-fill"></i> PDF
+          <i class="bi bi-arrow-down-circle-fill">&nbsp;PDF</i>
         </a>
+      }
+
+      @if (c.link !== "") {
         <a
-        *ngIf="c.link !== ''"
         class="link-button"
         href="{{c.link}}">
-          <i class="bi bi-link"></i> Link
+          <i class="bi bi-link">&nbsp;Link</i>
         </a>
+      }
       </div>
     </div>
   </div>
